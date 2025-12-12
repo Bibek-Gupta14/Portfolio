@@ -1,0 +1,1093 @@
+[00:00:04.170] Server  LOG      ✓ Ready in 2.8s
+[00:00:12.040] Server  LOG      ○ Compiling / ...
+[00:00:23.310] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:24.236] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-darkreader-mode="dynamic"
+-                         data-darkreader-scheme="dark"
+-                         data-darkreader-proxy-injected="true"
+                        >
+                          ...
+                            <SegmentViewNode type="page" pagePath="page.tsx">
+                              <SegmentTrieNode>
+                              <Home>
+                                <main className="min-h-scre...">
+                                  <Particles>
+                                    <canvas
+                                      ref={{current:null}}
+                                      className="fixed inset-0 pointer-events-none z-0"
+                                      style={{
++                                       background: "transparent"
+-                                       background-image: "initial"
+-                                       background-position-x: "initial"
+-                                       background-position-y: "initial"
+-                                       background-size: "initial"
+-                                       background-repeat: "initial"
+-                                       background-attachment: "initial"
+-                                       background-origin: "initial"
+-                                       background-clip: "initial"
+-                                       background-color: "transparent"
+-                                       --darkreader-inline-bgimage: "initial"
+-                                       --darkreader-inline-bgcolor: "transparent"
+                                      }}
+-                                     data-darkreader-inline-bgimage=""
+-                                     data-darkreader-inline-bgcolor=""
+                                    >
+                                  <CursorGlow>
+                                    <div
+                                      className="fixed pointer-events-none z-50 transition-opacity duration-300"
+                                      style={{
++                                       left: -200
+-                                       left: "-200px"
++                                       top: -200
+-                                       top: "-200px"
++                                       width: 400
+-                                       width: "400px"
++                                       height: 400
+-                                       height: "400px"
++                                       background: "radial-gradient(circle, rgba(233, 138, 21, 0.15) 0%, transparent ..."
++                                       opacity: 0
+-                                       opacity: "0"
+-                                       background-image: "radial-gradient(circle, rgba(233, 138, 21, 0.15) 0%, transp..."
+-                                       background-position-x: "initial"
+-                                       background-position-y: "initial"
+-                                       background-size: "initial"
+-                                       background-repeat: "initial"
+-                                       background-attachment: "initial"
+-                                       background-origin: "initial"
+-                                       background-clip: "initial"
+-                                       background-color: "initial"
+-                                       --darkreader-inline-bgimage: "radial-gradient(circle, var(--darkreader-backgro..."
+-                                       --darkreader-inline-bgcolor: "initial"
+                                      }}
+-                                     data-darkreader-inline-bgimage=""
+-                                     data-darkreader-inline-bgcolor=""
+                                    >
+                                  <div className="relative z-10">
+                                    ...
+                                      <button className="md:hidden ..." onClick={function onClick}>
+                                        <Menu size={24}>
+                                          <svg
+                                            ref={null}
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width={24}
+                                            height={24}
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            className="lucide lucide-menu"
+-                                           data-darkreader-inline-stroke=""
+-                                           style={{--darkreader-inline-stroke:"currentColor"}}
+                                          >
+                                    ...
+                                      <div className="grid lg:gr...">
+                                        <div className="text-cente...">
+                                          <div>
+                                          <h1>
+                                          <div>
+                                          <p>
+                                          <div className="flex items...">
+                                            <a href="https://gi..." target="_blank" rel="noopener n..." ...>
+                                              <Github size={22} className="group-hove...">
+                                                <svg
+                                                  ref={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  width={22}
+                                                  height={22}
+                                                  viewBox="0 0 24 24"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  strokeWidth={2}
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round"
+                                                  className="lucide lucide-github group-hover:scale-110 transition-tra..."
+-                                                 data-darkreader-inline-stroke=""
+-                                                 style={{--darkreader-inline-stroke:"currentColor"}}
+                                                >
+                                            <a href="https://li..." target="_blank" rel="noopener n..." ...>
+                                              <Linkedin size={22} className="group-hove...">
+                                                <svg
+                                                  ref={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  width={22}
+                                                  height={22}
+                                                  viewBox="0 0 24 24"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  strokeWidth={2}
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round"
+                                                  className="lucide lucide-linkedin group-hover:scale-110 transition-t..."
+-                                                 data-darkreader-inline-stroke=""
+-                                                 style={{--darkreader-inline-stroke:"currentColor"}}
+                                                >
+                                            <a href="mailto:bip..." className="group p-3 ...">
+                                              <Mail size={22} className="group-hove...">
+                                                <svg
+                                                  ref={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  width={22}
+                                                  height={22}
+                                                  viewBox="0 0 24 24"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  strokeWidth={2}
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round"
+                                                  className="lucide lucide-mail group-hover:scale-110 transition-trans..."
+-                                                 data-darkreader-inline-stroke=""
+-                                                 style={{--darkreader-inline-stroke:"currentColor"}}
+                                                >
+                                          <div className="flex flex-...">
+                                            ...
+                                              <a href="#projects" data-slot="button" className={"inline-f..."} ref={null}>
+                                                <ArrowDown className="ml-2" size={18}>
+                                                  <svg
+                                                    ref={null}
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width={18}
+                                                    height={18}
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth={2}
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    className="lucide lucide-arrow-down ml-2"
+-                                                   data-darkreader-inline-stroke=""
+-                                                   style={{--darkreader-inline-stroke:"currentColor"}}
+                                                  >
+                                            ...
+                                              <a href="/Bibek_Gup..." download={true} data-slot="button" ...>
+                                                <Download className="mr-2" size={18}>
+                                                  <svg
+                                                    ref={null}
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width={18}
+                                                    height={18}
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth={2}
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    className="lucide lucide-download mr-2"
+-                                                   data-darkreader-inline-stroke=""
+-                                                   style={{--darkreader-inline-stroke:"currentColor"}}
+                                                  >
+                                                ...
+                                        <div className="relative f...">
+                                          <div className="relative mb-8">
+                                            <div>
+                                            <div className="relative w...">
+                                              <img
+                                                alt="Bibek Gupta"
+                                                fetchPriority={undefined}
+                                                loading={undefined}
+                                                width={undefined}
+                                                height={undefined}
+                                                decoding="async"
+                                                data-nimg="fill"
+                                                className="object-cover"
+                                                style={{
++                                                 position: "absolute"
+-                                                 position: "absolute"
++                                                 height: "100%"
+-                                                 height: "100%"
++                                                 width: "100%"
+-                                                 width: "100%"
++                                                 left: 0
+-                                                 left: "0px"
++                                                 top: 0
+-                                                 top: "0px"
++                                                 right: 0
+-                                                 right: "0px"
++                                                 bottom: 0
+-                                                 bottom: "0px"
++                                                 objectFit: undefined
++                                                 objectPosition: undefined
++                                                 color: "transparent"
+-                                                 color: "transparent"
+-                                                 --darkreader-inline-color: "transparent"
+                                                }}
+                                                sizes={undefined}
+                                                srcSet={undefined}
+                                                src="/profile-photo.jpg"
+                                                ref={function}
+                                                onLoad={function onLoad}
+                                                onError={function onError}
+-                                               data-darkreader-inline-color=""
+                                              >
+                                              ...
+                                            <div className="absolute -...">
+                                              <CodeXml className="text-primary" size={24}>
+                                                <svg
+                                                  ref={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  width={24}
+                                                  height={24}
+                                                  viewBox="0 0 24 24"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  strokeWidth={2}
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round"
+                                                  className="lucide lucide-code-xml text-primary"
+-                                                 data-darkreader-inline-stroke=""
+-                                                 style={{--darkreader-inline-stroke:"currentColor"}}
+                                                >
+                                            <div className="absolute -...">
+                                              <Brain className="text-primary" size={24}>
+                                                <svg
+                                                  ref={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  width={24}
+                                                  height={24}
+                                                  viewBox="0 0 24 24"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  strokeWidth={2}
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round"
+                                                  className="lucide lucide-brain text-primary"
+-                                                 data-darkreader-inline-stroke=""
+-                                                 style={{--darkreader-inline-stroke:"currentColor"}}
+                                                >
+                                            <div className="absolute -...">
+                                              <Database className="text-primary" size={24}>
+                                                <svg
+                                                  ref={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  width={24}
+                                                  height={24}
+                                                  viewBox="0 0 24 24"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  strokeWidth={2}
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round"
+                                                  className="lucide lucide-database text-primary"
+-                                                 data-darkreader-inline-stroke=""
+-                                                 style={{--darkreader-inline-stroke:"currentColor"}}
+                                                >
+                                          ...
+                                    ...
+                                      <div ref={{current:null}} className="transition...">
+                                        <div className="flex items...">
+                                          <User className="text-primary" size={20}>
+                                            <svg
+                                              ref={null}
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width={20}
+                                              height={20}
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              strokeWidth={2}
+                                              strokeLinecap="round"
+                                              strokeLinejoin="round"
+                                              className="lucide lucide-user text-primary"
+-                                             data-darkreader-inline-stroke=""
+-                                             style={{--darkreader-inline-stroke:"currentColor"}}
+                                            >
+                                          ...
+                                        <p>
+                                        ...
+                                          <div className="space-y-3">
+                                            <div className="flex items...">
+                                              <MapPin className="text-primary" size={18}>
+                                                <svg
+                                                  ref={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  width={18}
+                                                  height={18}
+                                                  viewBox="0 0 24 24"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  strokeWidth={2}
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round"
+                                                  className="lucide lucide-map-pin text-primary"
+-                                                 data-darkreader-inline-stroke=""
+-                                                 style={{--darkreader-inline-stroke:"currentColor"}}
+                                                >
+                                              ...
+                                            <div className="flex items...">
+                                              <Calendar className="text-primary" size={18}>
+                                                <svg
+                                                  ref={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  width={18}
+                                                  height={18}
+                                                  viewBox="0 0 24 24"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  strokeWidth={2}
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round"
+                                                  className="lucide lucide-calendar text-primary"
+-                                                 data-darkreader-inline-stroke=""
+-                                                 style={{--darkreader-inline-stroke:"currentColor"}}
+                                                >
+                                              ...
+                                            <div className="flex items...">
+                                              <Coffee className="text-primary" size={18}>
+                                                <svg
+                                                  ref={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  width={18}
+                                                  height={18}
+                                                  viewBox="0 0 24 24"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  strokeWidth={2}
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round"
+                                                  className="lucide lucide-coffee text-primary"
+-                                                 data-darkreader-inline-stroke=""
+-                                                 style={{--darkreader-inline-stroke:"currentColor"}}
+                                                >
+                                              ...
+                                        ...
+                                    ...
+                                      <div ref={{current:null}} className="transition...">
+                                        <div className="flex items...">
+                                          <Briefcase className="text-primary" size={20}>
+                                            <svg
+                                              ref={null}
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width={20}
+                                              height={20}
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              strokeWidth={2}
+                                              strokeLinecap="round"
+                                              strokeLinejoin="round"
+                                              className="lucide lucide-briefcase text-primary"
+-                                             data-darkreader-inline-stroke=""
+-                                             style={{--darkreader-inline-stroke:"currentColor"}}
+                                            >
+                                          ...
+                                        <p>
+                                        ...
+                                          <div className="flex flex-...">
+                                            <div className="flex-shrink-0">
+                                              <div className="w-16 h-16 ...">
+                                                <img
+                                                  alt="IBM SkillsBuild x Edunet Foundation"
+                                                  fetchPriority={undefined}
+                                                  loading="lazy"
+                                                  width={64}
+                                                  height={64}
+                                                  decoding="async"
+                                                  data-nimg="1"
+                                                  className="object-cover"
++                                                 style={{color:"transparent"}}
+-                                                 style={{color:"transparent",--darkreader-inline-color:"transparent"}}
+                                                  sizes={undefined}
+                                                  srcSet={undefined}
+                                                  src="/ibm-logo-blue.jpg"
+                                                  ref={function}
+                                                  onLoad={function onLoad}
+                                                  onError={function onError}
+-                                                 data-darkreader-inline-color=""
+                                                >
+                                            ...
+                                              <a href="#" target="_blank" rel="noopener n..." className="opacity-0 ...">
+                                                <ExternalLink size={16}>
+                                                  <svg
+                                                    ref={null}
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width={16}
+                                                    height={16}
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth={2}
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    className="lucide lucide-external-link"
+-                                                   data-darkreader-inline-stroke=""
+-                                                   style={{--darkreader-inline-stroke:"currentColor"}}
+                                                  >
+                                        <h3>
+                                        ...
+                                          <div className="p-3 bg-pri...">
+                                            <Award className="text-primary" size={24}>
+                                              <svg
+                                                ref={null}
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width={24}
+                                                height={24}
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth={2}
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                className="lucide lucide-award text-primary"
+-                                               data-darkreader-inline-stroke=""
+-                                               style={{--darkreader-inline-stroke:"currentColor"}}
+                                              >
+                                    ...
+                                      <div className="grid md:gr...">
+                                        ...
+                                          <div className="p-2 bg-pri...">
+                                            <CodeXml className="text-primary" size={24}>
+                                              <svg
+                                                ref={null}
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width={24}
+                                                height={24}
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth={2}
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                className="lucide lucide-code-xml text-primary"
+-                                               data-darkreader-inline-stroke=""
+-                                               style={{--darkreader-inline-stroke:"currentColor"}}
+                                              >
+                                        ...
+                                          <div className="p-2 bg-pri...">
+                                            <Brain className="text-primary" size={24}>
+                                              <svg
+                                                ref={null}
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width={24}
+                                                height={24}
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth={2}
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                className="lucide lucide-brain text-primary"
+-                                               data-darkreader-inline-stroke=""
+-                                               style={{--darkreader-inline-stroke:"currentColor"}}
+                                              >
+                                        ...
+                                          <div className="p-2 bg-pri...">
+                                            <Database className="text-primary" size={24}>
+                                              <svg
+                                                ref={null}
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width={24}
+                                                height={24}
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth={2}
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                className="lucide lucide-database text-primary"
+-                                               data-darkreader-inline-stroke=""
+-                                               style={{--darkreader-inline-stroke:"currentColor"}}
+                                              >
+                                        ...
+                                          <div className="p-2 bg-pri...">
+                                            <Cpu className="text-primary" size={24}>
+                                              <svg
+                                                ref={null}
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width={24}
+                                                height={24}
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth={2}
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                className="lucide lucide-cpu text-primary"
+-                                               data-darkreader-inline-stroke=""
+-                                               style={{--darkreader-inline-stroke:"currentColor"}}
+                                              >
+                                    ...
+                                      <div ref={{current:null}} className="transition...">
+                                        <div className="flex items...">
+                                          <Sparkles className="text-primary" size={20}>
+                                            <svg
+                                              ref={null}
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width={20}
+                                              height={20}
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              strokeWidth={2}
+                                              strokeLinecap="round"
+                                              strokeLinejoin="round"
+                                              className="lucide lucide-sparkles text-primary"
+-                                             data-darkreader-inline-stroke=""
+-                                             style={{--darkreader-inline-stroke:"currentColor"}}
+                                            >
+                                          ...
+                                        <p>
+                                        <div className="space-y-8">
+                                          <TiltCard className="group" tiltIntensity={10}>
+                                            <div ref={{current:null}} className="relative t..." style={{transform:""}} ...>
+                                              <div className="relative o...">
+                                                <div className="grid md:gr...">
+                                                  <div className="relative h...">
+                                                    <img
+                                                      alt="Vriddhi (Agriculture Assistant)"
+                                                      fetchPriority={undefined}
+                                                      loading="lazy"
+                                                      width={undefined}
+                                                      height={undefined}
+                                                      decoding="async"
+                                                      data-nimg="fill"
+                                                      className="object-cover transition-transform duration-500 group-..."
+                                                      style={{
++                                                       position: "absolute"
+-                                                       position: "absolute"
++                                                       height: "100%"
+-                                                       height: "100%"
++                                                       width: "100%"
+-                                                       width: "100%"
++                                                       left: 0
+-                                                       left: "0px"
++                                                       top: 0
+-                                                       top: "0px"
++                                                       right: 0
+-                                                       right: "0px"
++                                                       bottom: 0
+-                                                       bottom: "0px"
++                                                       objectFit: undefined
++                                                       objectPosition: undefined
++                                                       color: "transparent"
+-                                                       color: "transparent"
+-                                                       --darkreader-inline-color: "transparent"
+                                                      }}
+                                                      sizes={undefined}
+                                                      srcSet={undefined}
+                                                      src="/agriculture-app-dashboard-plant-disease-detection-.jpg"
+                                                      ref={function}
+                                                      onLoad={function onLoad}
+                                                      onError={function onError}
+-                                                     data-darkreader-inline-color=""
+                                                    >
+                                                    ...
+                                                  ...
+                                                    <a href="https://gi..." target="_blank" rel="noopener n..." ...>
+                                                      <Github size={18}>
+                                                        <svg
+                                                          ref={null}
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          width={18}
+                                                          height={18}
+                                                          viewBox="0 0 24 24"
+                                                          fill="none"
+                                                          stroke="currentColor"
+                                                          strokeWidth={2}
+                                                          strokeLinecap="round"
+                                                          strokeLinejoin="round"
+                                                          className="lucide lucide-github"
+-                                                         data-darkreader-inline-stroke=""
+-                                                         style={{--darkreader-inline-stroke:"currentColor"}}
+                                                        >
+                                                      ...
+                                              <div
+                                                className="absolute inset-0 pointer-events-none rounded-xl opacity-0 g..."
+                                                style={{
++                                                 background: "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1..."
+-                                                 background-image: "radial-gradient(circle, rgba(255, 255, 255, 0.1) ..."
+-                                                 background-position-x: "initial"
+-                                                 background-position-y: "initial"
+-                                                 background-size: "initial"
+-                                                 background-repeat: "initial"
+-                                                 background-attachment: "initial"
+-                                                 background-origin: "initial"
+-                                                 background-clip: "initial"
+-                                                 background-color: "initial"
+-                                                 --darkreader-inline-bgimage: "radial-gradient(circle, var(--darkread..."
+-                                                 --darkreader-inline-bgcolor: "initial"
+                                                }}
+-                                               data-darkreader-inline-bgimage=""
+-                                               data-darkreader-inline-bgcolor=""
+                                              >
+                                          <TiltCard className="group" tiltIntensity={30}>
+                                            <div ref={{current:null}} className="relative t..." style={{transform:""}} ...>
+                                              <div className="relative o...">
+                                                <div className="grid md:gr...">
+                                                  <div>
+                                                    <div>
+                                                    <h3>
+                                                    <p>
+                                                    <div>
+                                                    <a href="https://gi..." target="_blank" rel="noopener n..." ...>
+                                                      <Github size={16}>
+                                                        <svg
+                                                          ref={null}
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          width={16}
+                                                          height={16}
+                                                          viewBox="0 0 24 24"
+                                                          fill="none"
+                                                          stroke="currentColor"
+                                                          strokeWidth={2}
+                                                          strokeLinecap="round"
+                                                          strokeLinejoin="round"
+                                                          className="lucide lucide-github"
+-                                                         data-darkreader-inline-stroke=""
+-                                                         style={{--darkreader-inline-stroke:"currentColor"}}
+                                                        >
+                                                      ...
+                                                  <div className="relative h...">
+                                                    <img
+                                                      alt="Employee Salary Prediction"
+                                                      fetchPriority={undefined}
+                                                      loading="lazy"
+                                                      width={undefined}
+                                                      height={undefined}
+                                                      decoding="async"
+                                                      data-nimg="fill"
+                                                      className="object-cover transition-transform duration-500 group-..."
+                                                      style={{
++                                                       position: "absolute"
+-                                                       position: "absolute"
++                                                       height: "100%"
+-                                                       height: "100%"
++                                                       width: "100%"
+-                                                       width: "100%"
++                                                       left: 0
+-                                                       left: "0px"
++                                                       top: 0
+-                                                       top: "0px"
++                                                       right: 0
+-                                                       right: "0px"
++                                                       bottom: 0
+-                                                       bottom: "0px"
++                                                       objectFit: undefined
++                                                       objectPosition: undefined
++                                                       color: "transparent"
+-                                                       color: "transparent"
+-                                                       --darkreader-inline-color: "transparent"
+                                                      }}
+                                                      sizes={undefined}
+                                                      srcSet={undefined}
+                                                      src="/machine-learning-salary-prediction-data-visualizat.jpg"
+                                                      ref={function}
+                                                      onLoad={function onLoad}
+                                                      onError={function onError}
+-                                                     data-darkreader-inline-color=""
+                                                    >
+                                              <div
+                                                className="absolute inset-0 pointer-events-none rounded-xl opacity-0 g..."
+                                                style={{
++                                                 background: "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1..."
+-                                                 background-image: "radial-gradient(circle, rgba(255, 255, 255, 0.1) ..."
+-                                                 background-position-x: "initial"
+-                                                 background-position-y: "initial"
+-                                                 background-size: "initial"
+-                                                 background-repeat: "initial"
+-                                                 background-attachment: "initial"
+-                                                 background-origin: "initial"
+-                                                 background-clip: "initial"
+-                                                 background-color: "initial"
+-                                                 --darkreader-inline-bgimage: "radial-gradient(circle, var(--darkread..."
+-                                                 --darkreader-inline-bgcolor: "initial"
+                                                }}
+-                                               data-darkreader-inline-bgimage=""
+-                                               data-darkreader-inline-bgcolor=""
+                                              >
+                                    ...
+                                      <div className="space-y-12">
+                                        ...
+                                          <div className="flex items...">
+                                            <GraduationCap className="text-primary" size={20}>
+                                              <svg
+                                                ref={null}
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width={20}
+                                                height={20}
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth={2}
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                className="lucide lucide-graduation-cap text-primary"
+-                                               data-darkreader-inline-stroke=""
+-                                               style={{--darkreader-inline-stroke:"currentColor"}}
+                                              >
+                                            ...
+                                        ...
+                                          <div className="flex items...">
+                                            <GraduationCap className="text-primary" size={20}>
+                                              <svg
+                                                ref={null}
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width={20}
+                                                height={20}
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth={2}
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                className="lucide lucide-graduation-cap text-primary"
+-                                               data-darkreader-inline-stroke=""
+-                                               style={{--darkreader-inline-stroke:"currentColor"}}
+                                              >
+                                            ...
+                                        ...
+                                          <div className="flex items...">
+                                            <GraduationCap className="text-primary" size={20}>
+                                              <svg
+                                                ref={null}
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width={20}
+                                                height={20}
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth={2}
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                className="lucide lucide-graduation-cap text-primary"
+-                                               data-darkreader-inline-stroke=""
+-                                               style={{--darkreader-inline-stroke:"currentColor"}}
+                                              >
+                                            ...
+                                    ...
+                                      <div className="grid md:gr...">
+                                        <div className="space-y-6">
+                                          <div className="flex items...">
+                                            <div className="p-3 bg-sec...">
+                                              <Mail size={20}>
+                                                <svg
+                                                  ref={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  width={20}
+                                                  height={20}
+                                                  viewBox="0 0 24 24"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  strokeWidth={2}
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round"
+                                                  className="lucide lucide-mail"
+-                                                 data-darkreader-inline-stroke=""
+-                                                 style={{--darkreader-inline-stroke:"currentColor"}}
+                                                >
+                                            <div>
+                                              <p>
+                                              <button onClick={function copyEmail} className="text-foreg...">
+                                                <Copy size={16}>
+                                                  <svg
+                                                    ref={null}
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width={16}
+                                                    height={16}
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth={2}
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    className="lucide lucide-copy"
+-                                                   data-darkreader-inline-stroke=""
+-                                                   style={{--darkreader-inline-stroke:"currentColor"}}
+                                                  >
+                                          <div className="flex items...">
+                                            <div className="p-3 bg-sec...">
+                                              <Phone size={20}>
+                                                <svg
+                                                  ref={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  width={20}
+                                                  height={20}
+                                                  viewBox="0 0 24 24"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  strokeWidth={2}
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round"
+                                                  className="lucide lucide-phone"
+-                                                 data-darkreader-inline-stroke=""
+-                                                 style={{--darkreader-inline-stroke:"currentColor"}}
+                                                >
+                                            ...
+                                          <div className="flex items...">
+                                            <div className="p-3 bg-sec...">
+                                              <MapPin size={20}>
+                                                <svg
+                                                  ref={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  width={20}
+                                                  height={20}
+                                                  viewBox="0 0 24 24"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  strokeWidth={2}
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round"
+                                                  className="lucide lucide-map-pin"
+-                                                 data-darkreader-inline-stroke=""
+-                                                 style={{--darkreader-inline-stroke:"currentColor"}}
+                                                >
+                                            ...
+                                        <div className="space-y-6">
+                                          <h3>
+                                          <div className="flex gap-4">
+                                            ...
+                                              <a href="https://li..." target="_blank" rel="noopener n..." ...>
+                                                <Linkedin className="mr-2" size={18}>
+                                                  <svg
+                                                    ref={null}
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width={18}
+                                                    height={18}
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth={2}
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    className="lucide lucide-linkedin mr-2"
+-                                                   data-darkreader-inline-stroke=""
+-                                                   style={{--darkreader-inline-stroke:"currentColor"}}
+                                                  >
+                                                ...
+                                            ...
+                                              <a href="https://gi..." target="_blank" rel="noopener n..." ...>
+                                                <Github className="mr-2" size={18}>
+                                                  <svg
+                                                    ref={null}
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width={18}
+                                                    height={18}
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth={2}
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    className="lucide lucide-github mr-2"
+-                                                   data-darkreader-inline-stroke=""
+-                                                   style={{--darkreader-inline-stroke:"currentColor"}}
+                                                  >
+                                                ...
+                                          ...
+                                            <a href="mailto:bip..." data-slot="button" className={"inline-f..."} ...>
+                                              <Mail className="mr-2" size={18}>
+                                                <svg
+                                                  ref={null}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  width={18}
+                                                  height={18}
+                                                  viewBox="0 0 24 24"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  strokeWidth={2}
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round"
+                                                  className="lucide lucide-mail mr-2"
+-                                                 data-darkreader-inline-stroke=""
+-                                                 style={{--darkreader-inline-stroke:"currentColor"}}
+                                                >
+                                              ...
+                                    ...
+                  ...
+
+[00:00:24.849] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:24.849] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:24.850] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765577015374}
+[00:02:08.505] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:08.506] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:02:08.506] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765577119029}
+[00:04:48.499] Server  LOG      ✓ Compiled in 202ms
+[00:04:52.807] Server  LOG      ✓ Compiled in 150ms
+[00:04:54.266] Server  LOG      ✓ Compiled in 160ms
+[00:05:09.111] Server  LOG      ✓ Compiled in 289ms
+[00:05:16.033] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:05:16.033] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:05:16.033] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765577306554}
+[00:06:05.918] Server  LOG      ✓ Compiled in 116ms
+[00:06:10.288] Server  LOG      ✓ Compiled in 247ms
+[00:06:17.312] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:17.312] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:06:17.312] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765577367833}
+[00:06:54.831] Server  LOG      ✓ Compiled in 152ms
+[00:06:57.611] Server  LOG      ✓ Compiled in 141ms
+[00:10:13.346] Server  LOG      ✓ Compiled in 118ms
+[00:10:30.050] Server  LOG      ✓ Compiled in 119ms
+[00:10:32.547] Server  LOG      ✓ Compiled in 139ms
+[00:17:06.154] Server  LOG      ✓ Compiled in 1045ms
+[00:17:11.619] Server  LOG      ✓ Compiled in 1602ms
+[00:17:13.116] Browser ERROR   uncaughtError: ReferenceError: Linkedin is not defined
+[00:17:18.387] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:17:18.401] Server  LOG      ✓ Compiled in 492ms
+[00:17:19.983] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765578029441}
+[00:17:23.118] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:17:23.118] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:17:23.118] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765578032875}
+[00:18:20.807] Server  LOG      ✓ Compiled in 161ms
+[00:18:57.018] Server  LOG      ✓ Compiled in 401ms
+[00:19:09.512] Server  LOG      ✓ Compiled in 648ms
+[00:19:18.771] Server  LOG      ✓ Compiled in 276ms
+[00:19:44.420] Server  LOG      ✓ Compiled in 223ms
+[00:19:45.113] Browser ERROR   ./components/contact.tsx:129:69
+Parsing ecmascript source code failed
+  127 |                 className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+  128 |               >
+> 129 |                 <a href="mailto:biplabgupta50@gmail.com" tabIndex={}>
+      |                                                                     ^
+  130 |                   <Mail className="mr-2" size={18} />
+  131 |                   Send me an email
+  132 |                 </a>
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./components/contact.tsx
+    ./app/page.tsx
+[00:19:47.131] Browser ERROR   Received `%s` for a non-boolean attribute `%s`.
+
+If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true ta ta true ta
+[00:19:49.893] Server  LOG      ✓ Compiled in 100ms
+[00:19:54.208] Server  LOG      ✓ Compiled in 94ms
+[00:19:56.706] Server  LOG      ✓ Compiled in 157ms
+[00:21:27.085] Server  LOG      ✓ Compiled in 417ms
+[00:21:28.123] Browser ERROR   uncaughtError: ReferenceError: TiltCard is not defined
+[00:21:35.118] Server  LOG      ✓ Compiled in 1707ms
+[00:21:36.122] Browser ERROR   ./components/projects.tsx:167:13
+Parsing ecmascript source code failed
+  165 |                 </div>
+  166 |               </TiltCard>
+> 167 |             ))}
+      |             ^
+  168 |           </div>
+  169 |         </div>
+  170 |       </div>
+
+Expected '</', got ')'
+
+Import trace:
+  Server Component:
+    ./components/projects.tsx
+    ./app/page.tsx
+[00:21:38.662] Server  LOG      ✓ Compiled in 297ms
+[00:21:38.664] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:21:42.113] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:21:42.113] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:21:42.113] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765578291825}
+[00:24:04.214] Server  LOG      ✓ Compiled in 314ms
+[00:26:37.259] Server  LOG      ✓ Compiled in 641ms
+[00:26:44.665] Server  LOG      ✓ Compiled in 677ms
+[00:26:55.206] Server  LOG      ✓ Compiled in 839ms
+[00:27:01.646] Server  LOG      ✓ Compiled in 1601ms
+[00:28:18.035] Server  LOG      ✓ Compiled in 4.1s
+[00:29:04.522] Server  LOG      ✓ Compiled in 575ms
+[00:30:12.512] Server  LOG      ✓ Compiled in 594ms
+[00:30:21.921] Server  LOG      ✓ Compiled in 658ms
+[00:31:10.878] Server  LOG      ✓ Compiled in 173ms
+[00:31:31.037] Server  LOG      ✓ Compiled in 538ms
+[00:31:35.657] Server  LOG      ✓ Compiled in 283ms
+[00:32:22.163] Server  LOG      ✓ Compiled in 159ms
+[00:32:28.323] Server  LOG      ✓ Compiled in 258ms
+[00:32:34.092] Server  LOG      ✓ Compiled in 258ms
+[00:32:45.163] Server  LOG      ✓ Compiled in 530ms
+[00:35:30.666] Server  LOG      ✓ Compiled in 1407ms
+[00:36:53.005] Server  LOG      ✓ Compiled in 133ms
+[00:36:57.799] Server  LOG      ✓ Compiled in 142ms
+[00:37:10.551] Server  LOG      ✓ Compiled in 786ms
+[00:37:14.531] Server  LOG      ✓ Compiled in 140ms
+[00:37:17.933] Server  LOG      ✓ Compiled in 120ms
+[00:37:22.342] Server  LOG      ✓ Compiled in 122ms
+[00:37:25.095] Server  LOG      ✓ Compiled in 522ms
+[00:37:36.559] Server  LOG      ✓ Compiled in 138ms
+[00:37:37.773] Server  LOG      ✓ Compiled in 245ms
+[00:37:42.809] Server  LOG      ✓ Compiled in 593ms
+[00:37:54.714] Server  LOG      ✓ Compiled in 259ms
+[00:38:49.017] Server  LOG      ✓ Compiled in 789ms
+[00:45:43.445] Server  LOG      ✓ Compiled in 264ms
+[00:45:45.902] Server  LOG      ✓ Compiled in 733ms
+[00:45:51.166] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:45:51.166] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:45:51.166] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/#contact color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#contact","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765579741686}
+[00:46:09.921] Server  LOG      ✓ Compiled in 134ms
+[00:46:19.248] Server  LOG      ✓ Compiled in 372ms
+[00:46:27.912] Server  LOG      ✓ Compiled in 110ms
+[00:47:14.475] Server  LOG      ✓ Compiled in 798ms
+[00:50:45.621] Server  LOG      ✓ Compiled in 838ms
+[00:52:06.430] Server  LOG      ✓ Compiled in 503ms
+[00:52:11.999] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:52:11.999] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:52:11.999] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/#contact color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#contact","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765580122524}
+[00:52:27.466] Server  LOG      ✓ Compiled in 145ms
+[00:52:40.631] Server  LOG      ✓ Compiled in 182ms
+[00:52:41.964] Server  LOG      ✓ Compiled in 106ms
+[00:52:44.334] Server  LOG      ✓ Compiled in 115ms
+[00:52:53.626] Server  LOG      ✓ Compiled in 675ms
+[00:53:01.922] Server  LOG      ✓ Compiled in 293ms
+[00:53:15.346] Server  LOG      ✓ Compiled in 346ms
+[00:53:29.094] Server  LOG      ✓ Compiled in 210ms
+[00:54:01.676] Server  LOG      ✓ Compiled in 397ms
+[00:54:15.621] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:54:15.621] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:54:15.621] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/#contact color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#contact","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765580246143}
+[00:54:55.158] Server  LOG      ✓ Compiled in 179ms
+[00:55:02.473] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:55:02.473] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:55:02.473] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/#contact color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#contact","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765580293003}
+[00:55:52.531] Server  LOG      ✓ Compiled in 694ms
+[00:56:04.946] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:56:04.946] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:56:04.947] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/#contact color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#contact","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765580355470}
+[00:56:31.312] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:56:31.312] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:56:31.312] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/#about color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765580381839}
+[00:56:36.037] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:56:36.037] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:56:36.037] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/#about color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765580386540}
+[00:57:39.605] Server  LOG      ✓ Compiled in 289ms
+[01:01:23.065] Server  LOG      ✓ Compiled in 296ms
+[01:01:23.252] Server  LOG      ✓ Compiled in 181ms
+[01:02:10.251] Server  LOG      ✓ Compiled in 325ms
+[01:02:24.908] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:02:24.908] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:02:24.908] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/#about color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765580735432}
+[01:02:50.135] Server  LOG      ✓ Compiled in 140ms
+[01:03:21.744] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:03:21.744] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:03:21.744] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/#about color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765580792270}
+[01:03:41.284] Server  LOG      ✓ Compiled in 1182ms
+[01:03:55.528] Server  LOG      ✓ Compiled in 2.1s
+[01:05:53.945] Server  LOG      ✓ Compiled in 1045ms
