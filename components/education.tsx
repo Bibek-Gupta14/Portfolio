@@ -9,7 +9,7 @@ const education = [
     institution: "Kalinga Institute of Industrial Technology (KIIT)",
     degree: "Bachelor of Technology (B.Tech), Computer Science Engineering",
     period: "Jul 2023 – Jun 2027",
-    grade: "CGPA: 9.25",
+    grade: "CGPA: 9.07",
     location: "Bhubaneswar",
   },
   {

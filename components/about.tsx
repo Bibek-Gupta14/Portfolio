@@ -15,7 +15,7 @@ export function About() {
           ref={ref}
           className={cn(
             "transition-all duration-700",
-            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
           )}
         >
           <div className="flex items-center gap-3 mb-4">
@@ -28,31 +28,36 @@ export function About() {
           <p className="text-2xl md:text-3xl text-foreground leading-relaxed mb-8 text-pretty">
             I'm a developer passionate about building{" "}
             <span className="text-primary font-semibold">
-              intelligent systems
-            </span>{" "}
-            that blend thoughtful design with robust engineering. My work lies
-            at the intersection of{" "}
-            <span className="text-primary font-semibold">
-              software development
+              AI-powered systems
             </span>{" "}
             and{" "}
-            <span className="text-primary font-semibold">machine learning</span>
-            , creating solutions that are both functional and impactful.
+            <span className="text-primary font-semibold">
+              intelligent agents
+            </span>{" "}
+            that solve real-world problems. My work focuses on{" "}
+            <span className="text-primary font-semibold">
+              LangChain, RAG systems
+            </span>
+            , and modern{" "}
+            <span className="text-primary font-semibold">
+              full-stack AI applications
+            </span>
+            , creating solutions that are both innovative and impactful.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Currently pursuing B.Tech in Computer Science at KIIT with a
-                CGPA of 9.25, I've gained hands-on experience in AI/ML through
-                my virtual internship with IBM SkillsBuild and Edunet
-                Foundation.
+                CGPA of 9.07, I've gained hands-on experience building AI agents
+                and RAG systems using LangChain, OpenAI, and vector databases.
+                Recent projects include AgentResearch AI and DocQuery.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I specialize in full-stack development using the MERN stack and
-                Python-based machine learning. When I'm not coding, you'll find
-                me exploring new technologies, participating in hackathons, or
-                contributing to automation initiatives.
+                I specialize in full-stack development with React/TypeScript,
+                FastAPI, and Python-based AI/ML systems. When I'm not coding,
+                you'll find me exploring new AI frameworks, participating in
+                hackathons, or contributing to automation initiatives.
               </p>
             </div>
 

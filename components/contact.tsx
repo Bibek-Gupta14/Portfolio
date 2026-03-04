@@ -31,7 +31,7 @@ export function Contact() {
           ref={ref}
           className={cn(
             "transition-all duration-700",
-            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
           )}
         >
           <h2 className="text-sm font-medium text-primary mb-4 tracking-wider uppercase">
@@ -54,7 +54,7 @@ export function Contact() {
                     onClick={copyEmail}
                     className="text-foreground hover:text-primary transition-colors flex items-center gap-2"
                   >
-                    biplabgupta50@gmail.com
+                    bibekg1406@gmail.com
                     {copied ? (
                       <Check size={16} className="text-primary" />
                     ) : (
@@ -126,7 +126,7 @@ export function Contact() {
                 size="lg"
                 className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
               >
-                <a href="mailto:biplabgupta50@gmail.com" target="_blank">
+                <a href="mailto:bibekg1406@gmail.com" target="_blank">
                   <Mail className="mr-2" size={18} />
                   Send me an email
                 </a>

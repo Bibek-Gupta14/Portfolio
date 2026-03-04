@@ -115,9 +115,9 @@ export function Hero() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-border hover:border-primary hover:bg-primary/5 bg-transparent hover:wtext-primary"
+                  className="border-border hover:border-primary hover:bg-primary/5 bg-transparent hover:text-primary"
                 >
-                  <a href="/Bibek_Gupta_Resume.pdf" download>
+                  <a href="/Bibek_Gupta-Resume.pdf" download>
                     <Download className="mr-2" size={18} />
                     Download CV
                   </a>
@@ -155,14 +155,14 @@ export function Hero() {
               <div className="grid grid-cols-3 gap-6 w-full max-w-md">
                 <div className="text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border">
                   <div className="text-3xl font-bold text-primary">
-                    <AnimatedCounter end={9} suffix="+" />
+                    <AnimatedCounter end={6} suffix="+" />
                   </div>
                   <div className="text-sm text-muted-foreground">Projects</div>
                 </div>
                 <div className="text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border">
                   <div className="text-3xl font-bold text-primary">
                     <AnimatedCounter end={9} suffix="." prefix="" />
-                    <span className="text-2xl">25</span>
+                    <span className="text-2xl">07</span>
                   </div>
                   <div className="text-sm text-muted-foreground">CGPA</div>
                 </div>

@@ -15,10 +15,10 @@ const skillCategories = [
     hoverBg: "group-hover:bg-blue-500/20",
     skillHover:
       "hover:bg-blue-500/20 hover:text-blue-400 hover:border-blue-500/50",
-    skills: ["Java", "Python", "JavaScript", "CSS", "Git/GitHub"],
+    skills: ["Python", "TypeScript", "JavaScript", "Java", "CSS", "Git/GitHub"],
   },
   {
-    title: "AI/ML",
+    title: "AI/ML & LLMs",
     icon: Brain,
     color: "from-purple-500 to-pink-500",
     bgColor: "bg-purple-500/10",
@@ -28,11 +28,12 @@ const skillCategories = [
     skillHover:
       "hover:bg-purple-500/20 hover:text-purple-400 hover:border-purple-500/50",
     skills: [
-      "Supervised Learning",
+      "LangChain",
+      "OpenAI API",
+      "RAG Systems",
+      "Vector DBs (FAISS, ChromaDB)",
       "Deep Learning",
       "Neural Networks",
-      "Data Preprocessing",
-      "Model Evaluation",
     ],
   },
   {
@@ -45,7 +46,14 @@ const skillCategories = [
     hoverBg: "group-hover:bg-emerald-500/20",
     skillHover:
       "hover:bg-emerald-500/20 hover:text-emerald-400 hover:border-emerald-500/50",
-    skills: ["React", "Node.js", "Express.js", "MongoDB", "MySQL"],
+    skills: [
+      "React",
+      "FastAPI",
+      "Streamlit",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
   },
   {
     title: "CS Fundamentals",
@@ -71,7 +79,7 @@ export function Skills() {
           ref={ref}
           className={cn(
             "transition-all duration-700",
-            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
           )}
         >
           <h2 className="text-sm font-medium text-primary mb-4 tracking-wider uppercase">
@@ -90,7 +98,7 @@ export function Skills() {
                   className={cn(
                     "group relative p-8 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm transition-all duration-500 min-h-[380px]",
                     category.borderColor,
-                    "hover:bg-card/60 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5"
+                    "hover:bg-card/60 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5",
                   )}
                   style={{
                     transitionDelay: `${categoryIndex * 100}ms`,
@@ -100,7 +108,7 @@ export function Skills() {
                   <div
                     className={cn(
                       "absolute top-0 left-6 right-6 h-[2px] rounded-full bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-500",
-                      category.color
+                      category.color,
                     )}
                   />
 
@@ -110,7 +118,7 @@ export function Skills() {
                       "w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-all duration-300",
                       category.bgColor,
                       category.hoverBg,
-                      "group-hover:scale-110"
+                      "group-hover:scale-110",
                     )}
                   >
                     <Icon className={cn("w-6 h-6", category.iconColor)} />
@@ -120,7 +128,7 @@ export function Skills() {
                   <h3
                     className={cn(
                       "text-lg font-semibold text-foreground mb-4 transition-colors",
-                      category.iconColor.replace("text-", "group-hover:text-")
+                      category.iconColor.replace("text-", "group-hover:text-"),
                     )}
                   >
                     {category.title}
@@ -134,7 +142,7 @@ export function Skills() {
                         className={cn(
                           "px-4 py-2.5 text-sm font-medium rounded-lg border border-border/30 bg-secondary/30 text-muted-foreground transition-all duration-300 cursor-default",
                           category.skillHover,
-                          "hover:scale-105 hover:shadow-md"
+                          "hover:scale-105 hover:shadow-md",
                         )}
                         style={{
                           animationDelay: `${skillIndex * 50}ms`,

@@ -2,30 +2,34 @@
 
 import { useInView } from "@/hooks/use-in-view";
 import { cn } from "@/lib/utils";
-import { ExternalLink, Github, Sparkles } from "lucide-react";
+import { ExternalLink, Github, Sparkles, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
-    title: "Vriddhi (Agriculture Assistant)",
+    title: "AgentResearch AI",
     description:
-      "A full-stack agriculture assistant website for farmers featuring a CNN-based model that detects critical plant diseases using Computer Vision. Integrated chatbot features for interactive farmer assistance.",
-    tech: ["React", "Node.js", "MongoDB", "Python", "TensorFlow", "CNN"],
-    github: "#",
-    live: "#",
-    period: "Sep 2025 – Oct 2025",
-    image: "/agriculture-app-dashboard-plant-disease-detection-.jpg",
+      "An intelligent AI-powered research agent that autonomously gathers, analyzes, and synthesizes information from multiple sources. Features advanced natural language processing and automated research workflows for comprehensive data analysis.",
+    tech: ["Python", "LangChain", "OpenAI", "FastAPI", "React", "TypeScript"],
+    github: "https://github.com/Bibek-Gupta14/AgentResearch-ai",
+    live: "https://agentresearch-ai.pages.dev/",
+    period: "Jan 2026 – Feb 2026",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
     featured: true,
   },
   {
-    title: "Employee Salary Prediction",
+    title: "DocQuery AI",
     description:
-      "Built a machine learning model to predict employee salaries using real-world demographic and employment data. Applied data pre-processing, label encoding, and exploratory data analysis.",
-    tech: ["Python", "Pandas", "Matplotlib", "Scikit-learn"],
-    github: "#",
-    period: "Jun 2025 – Jul 2025",
-    image: "/machine-learning-salary-prediction-data-visualizat.jpg",
-    featured: false,
+      "A sophisticated document query system powered by AI that enables natural language questions over large document collections. Implements RAG (Retrieval Augmented Generation) for accurate context-aware responses from PDFs, documents, and text files.",
+    tech: ["Python", "LangChain", "ChromaDB", "Streamlit", "OpenAI", "FAISS"],
+    github: "https://github.com/Bibek-Gupta14/DocQuery",
+    live: "https://doc-query-ai.streamlit.app/",
+    period: "Dec 2025 – Jan 2026",
+    image:
+      "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=800&h=600&fit=crop",
+    featured: true,
   },
 ];
 
@@ -39,7 +43,7 @@ export function Projects() {
           ref={ref}
           className={cn(
             "transition-all duration-700",
-            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
           )}
         >
           <div className="flex items-center gap-3 mb-4">
@@ -102,11 +106,7 @@ export function Projects() {
                       </div>
                       <div className="flex gap-3">
                         <a
-                          href={
-                            project.featured
-                              ? "https://github.com/Bibek-Gupta14/Vriddhi.git"
-                              : "https://github.com/Bibek-Gupta14/Bibek-Gupta14-Employee-Salary-Prediction-ML.git"
-                          }
+                          href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-2 px-4 py-2 bg-secondary hover:bg-primary hover:text-primary-foreground rounded-lg transition-all duration-300"
@@ -114,12 +114,36 @@ export function Projects() {
                           <Github size={18} />
                           Code
                         </a>
+                        {project.live && project.live !== "#" && (
+                          <a
+                            href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300"
+                          >
+                            <ExternalLink size={18} />
+                            Live
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <Link
+              href="/projects"
+              className="group flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300"
+            >
+              View All Projects
+              <ArrowRight
+                size={18}
+                className="group-hover:translate-x-1 transition-transform"
+              />
+            </Link>
           </div>
         </div>
       </div>
