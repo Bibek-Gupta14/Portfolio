@@ -20,7 +20,7 @@ const allProjects = [
     featured: true,
   },
   {
-    title: "DocQuery",
+    title: "DocQuery AI",
     description:
       "A sophisticated document query system powered by AI that enables natural language questions over large document collections. Implements RAG (Retrieval Augmented Generation) for accurate context-aware responses from PDFs, documents, and text files.",
     tech: ["Python", "LangChain", "ChromaDB", "Streamlit", "OpenAI", "FAISS"],
@@ -32,24 +32,25 @@ const allProjects = [
     featured: true,
   },
   {
-    title: "Vriddhi (Agriculture Assistant)",
+    title: "AMO ESIS Portal - Government",
     description:
-      "A full-stack agriculture assistant website for farmers featuring a CNN-based model that detects critical plant diseases using Computer Vision. Integrated chatbot features for interactive farmer assistance.",
-    tech: ["React", "Node.js", "MongoDB", "Python", "TensorFlow", "CNN"],
-    github: "https://github.com/Bibek-Gupta14/Vriddhi.git",
-    live: "#",
-    period: "Sep 2025 – Oct 2025",
-    image: "/agriculture-app-dashboard-plant-disease-detection-.jpg",
+      "A comprehensive government portal for the Employees' State Insurance Scheme in Meghalaya. Built with accessibility and compliance at its core, featuring WCAG 2.1 AA compliance, GIGW 3.0 certification, responsive design, and advanced typography controls for inclusive access to social security benefits.",
+    tech: ["HTML5", "CSS3", "Vanilla JavaScript", "WCAG 2.1 AA", "Responsive Design"],
+    github: "https://github.com/Bibek-Gupta14/AMO-ESIS",
+    live: "https://bibek-gupta14.github.io/AMO-ESIS",
+    period: "May 2026 ",
+    image:
+      "https://img.magnific.com/premium-vector/ashok-pillar-vector-sign-symbol-satyamev-jayete-text-hindi-ashok-stambh-sign-symbol-national-emblem-india-government-india-vector-illustration-flat-design_1228591-626.jpg?w=1480?w=300&h=100&fit=fill",
     featured: false,
   },
   {
-    title: "Employee Salary Prediction",
+    title: "Wage Regression Analysis",
     description:
       "Built a machine learning model to predict employee salaries using real-world demographic and employment data. Applied data pre-processing, label encoding, and exploratory data analysis.",
     tech: ["Python", "Pandas", "Matplotlib", "Scikit-learn"],
     github:
       "https://github.com/Bibek-Gupta14/Bibek-Gupta14-Employee-Salary-Prediction-ML.git",
-    live: "#",
+    live: "https://bibek-gupta14-employee-salary-prediction-ml.streamlit.app/",
     period: "Jun 2025 – Jul 2025",
     image: "/machine-learning-salary-prediction-data-visualizat.jpg",
     featured: false,

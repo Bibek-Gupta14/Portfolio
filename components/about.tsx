@@ -49,7 +49,7 @@ export function About() {
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Currently pursuing B.Tech in Computer Science at KIIT with a
-                CGPA of 9.07, I've gained hands-on experience building AI agents
+                CGPA of 9.05, I've gained hands-on experience building AI agents
                 and RAG systems using LangChain, OpenAI, and vector databases.
                 Recent projects include AgentResearch AI and DocQuery.
               </p>

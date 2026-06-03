@@ -36,7 +36,7 @@ A modern, interactive portfolio showcasing my journey as an AI Engineer and Full
 
 ### 🏆 Highlights
 
-- 🎓 **9.07 CGPA** at KIIT University
+- 🎓 **9.05 CGPA** at KIIT University
 - 🏅 **Top 10%** at Mumbai Hacks (Agentic AI Hackathon)
 - 🤖 **AI/ML Specialist** with expertise in LangChain, RAG systems, and Vector Databases
 - 💼 **2+ Professional Projects** deployed and live

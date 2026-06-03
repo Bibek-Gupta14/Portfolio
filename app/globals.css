@@ -10,33 +10,33 @@
   --card-foreground: oklch(0.95 0.01 250);
   --popover: oklch(0.16 0.02 250);
   --popover-foreground: oklch(0.95 0.01 250);
-  --primary: oklch(0.696 0.17 162.48);
+  --primary: oklch(0.65 0.25 290);
   --primary-foreground: oklch(0.13 0.02 250);
   --secondary: oklch(0.22 0.02 250);
   --secondary-foreground: oklch(0.95 0.01 250);
   --muted: oklch(0.22 0.02 250);
   --muted-foreground: oklch(0.65 0.02 250);
-  --accent: oklch(0.696 0.17 162.48);
+  --accent: oklch(0.65 0.25 290);
   --accent-foreground: oklch(0.13 0.02 250);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: oklch(0.28 0.02 250);
   --input: oklch(0.22 0.02 250);
-  --ring: oklch(0.696 0.17 162.48);
-  --chart-1: oklch(0.696 0.17 162.48);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --ring: oklch(0.65 0.25 290);
+  --chart-1: oklch(0.65 0.25 290);
+  --chart-2: oklch(0.6 0.25 300);
+  --chart-3: oklch(0.7 0.22 280);
+  --chart-4: oklch(0.55 0.28 295);
+  --chart-5: oklch(0.75 0.2 285);
   --radius: 0.625rem;
   --sidebar: oklch(0.16 0.02 250);
   --sidebar-foreground: oklch(0.95 0.01 250);
-  --sidebar-primary: oklch(0.696 0.17 162.48);
+  --sidebar-primary: oklch(0.65 0.25 290);
   --sidebar-primary-foreground: oklch(0.13 0.02 250);
   --sidebar-accent: oklch(0.22 0.02 250);
   --sidebar-accent-foreground: oklch(0.95 0.01 250);
   --sidebar-border: oklch(0.28 0.02 250);
-  --sidebar-ring: oklch(0.696 0.17 162.48);
+  --sidebar-ring: oklch(0.65 0.25 290);
 }
 
 .dark {
@@ -46,32 +46,32 @@
   --card-foreground: oklch(0.95 0.01 250);
   --popover: oklch(0.16 0.02 250);
   --popover-foreground: oklch(0.95 0.01 250);
-  --primary: oklch(0.696 0.17 162.48);
+  --primary: oklch(0.65 0.25 290);
   --primary-foreground: oklch(0.13 0.02 250);
   --secondary: oklch(0.22 0.02 250);
   --secondary-foreground: oklch(0.95 0.01 250);
   --muted: oklch(0.22 0.02 250);
   --muted-foreground: oklch(0.65 0.02 250);
-  --accent: oklch(0.696 0.17 162.48);
+  --accent: oklch(0.65 0.25 290);
   --accent-foreground: oklch(0.13 0.02 250);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
   --border: oklch(0.28 0.02 250);
   --input: oklch(0.22 0.02 250);
-  --ring: oklch(0.696 0.17 162.48);
-  --chart-1: oklch(0.696 0.17 162.48);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
+  --ring: oklch(0.65 0.25 290);
+  --chart-1: oklch(0.65 0.25 290);
+  --chart-2: oklch(0.65 0.25 290);
+  --chart-3: oklch(0.75 0.2 285);
+  --chart-4: oklch(0.55 0.28 295);
+  --chart-5: oklch(0.7 0.22 280);
   --sidebar: oklch(0.16 0.02 250);
   --sidebar-foreground: oklch(0.95 0.01 250);
-  --sidebar-primary: oklch(0.696 0.17 162.48);
+  --sidebar-primary: oklch(0.65 0.25 290);
   --sidebar-primary-foreground: oklch(0.13 0.02 250);
   --sidebar-accent: oklch(0.22 0.02 250);
   --sidebar-accent-foreground: oklch(0.95 0.01 250);
   --sidebar-border: oklch(0.28 0.02 250);
-  --sidebar-ring: oklch(0.696 0.17 162.48);
+  --sidebar-ring: oklch(0.65 0.25 290);
 }
 
 @theme inline {
@@ -127,7 +127,11 @@
   }
 }
 
-/* Added custom animations */
+/* ============================================
+   ANIMATION KEYFRAMES - Priority 1 Foundation
+   ============================================ */
+
+/* Shimmer/Loading Effect */
 @keyframes shimmer {
   0% {
     transform: translateX(-100%);
@@ -137,6 +141,7 @@
   }
 }
 
+/* Float Animation */
 @keyframes float {
   0%,
   100% {
@@ -147,6 +152,7 @@
   }
 }
 
+/* Glow Effect */
 @keyframes glow {
   0%,
   100% {
@@ -157,6 +163,299 @@
   }
 }
 
+/* Scroll Progress Indicator */
+@keyframes scrollProgress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Particle/Glow Effects on Scroll */
+@keyframes particleFloat {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx, 0), var(--ty, -100px)) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes particleFade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Gradient Border Animation */
+@keyframes gradientBorderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Blur Animations for Reveals */
+@keyframes blurInReveal {
+  0% {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes blurOutHide {
+  0% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(10px);
+    opacity: 0;
+  }
+}
+
+/* Smooth Page Transitions */
+@keyframes pageEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageExit {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Fade In/Out Page Transition */
+@keyframes fadeInPage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Micro-interactions for Buttons */
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes buttonPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(147, 51, 234, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(147, 51, 234, 0);
+  }
+}
+
+@keyframes buttonHoverGlow {
+  0% {
+    background-color: var(--primary);
+  }
+  50% {
+    background-color: oklch(0.7 0.25 290);
+  }
+  100% {
+    background-color: var(--primary);
+  }
+}
+
+/* Stagger Animation */
+@keyframes staggerItem {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 3D Perspective Lift Effect */
+@keyframes cardLift {
+  0% {
+    transform: translateY(0) rotateX(0deg);
+  }
+  100% {
+    transform: translateY(-10px) rotateX(5deg);
+  }
+}
+
+/* Animated Scroll Indicator */
+@keyframes scrollIndicator {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Animated Background Pattern */
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Animated Gradient */
+@keyframes animatedGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Tab Switching Animation */
+@keyframes tabSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Skill Bar Fill Animation */
+@keyframes skillBarFill {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: var(--skill-width, 100%);
+    opacity: 1;
+  }
+}
+
+/* Floating Motion */
+@keyframes floatingSmall {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes floatingMedium {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes floatingLarge {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Spin Animation with Smooth Rotation */
+@keyframes spinSmooth {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Bounce Animation */
+@keyframes bounce-smooth {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Wave Animation */
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Utility Classes for Animations */
 .animate-shimmer {
   animation: shimmer 2s infinite;
 }
@@ -169,12 +468,155 @@
   animation: glow 2s ease-in-out infinite;
 }
 
+.animate-scroll-progress {
+  animation: scrollProgress linear;
+}
+
+.animate-particle-float {
+  animation: particleFloat 3s ease-out forwards;
+}
+
+.animate-particle-fade {
+  animation: particleFade 2s ease-out forwards;
+}
+
+.animate-gradient-border {
+  animation: gradientBorderFlow 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-gradient-rotate {
+  animation: gradientRotate 3s ease-in-out infinite;
+  background-size: 200% 200%;
+}
+
+.animate-blur-in {
+  animation: blurInReveal 0.6s ease-out forwards;
+}
+
+.animate-blur-out {
+  animation: blurOutHide 0.6s ease-in forwards;
+}
+
+.animate-page-enter {
+  animation: pageEnter 0.5s ease-out forwards;
+}
+
+.animate-page-exit {
+  animation: pageExit 0.5s ease-in forwards;
+}
+
+.animate-fade-in-page {
+  animation: fadeInPage 0.5s ease-out forwards;
+}
+
+.animate-button-press {
+  animation: buttonPress 0.3s ease-in-out;
+}
+
+.animate-button-pulse {
+  animation: buttonPulse 2s infinite;
+}
+
+.animate-button-glow {
+  animation: buttonHoverGlow 2s ease-in-out infinite;
+}
+
+.animate-stagger {
+  animation: staggerItem 0.5s ease-out forwards;
+}
+
+.animate-card-lift {
+  animation: cardLift 0.6s ease-out forwards;
+}
+
+.animate-scroll-indicator {
+  animation: scrollIndicator 1.5s ease-in-out infinite;
+}
+
+.animate-background-shift {
+  animation: backgroundShift 8s ease infinite;
+}
+
+.animate-background-gradient {
+  animation: animatedGradient 3s ease infinite;
+}
+
+.animate-tab-slide {
+  animation: tabSlide 0.3s ease-out forwards;
+}
+
+.animate-skill-bar {
+  animation: skillBarFill 1.5s ease-out forwards;
+}
+
+.animate-floating-sm {
+  animation: floatingSmall 3s ease-in-out infinite;
+}
+
+.animate-floating-md {
+  animation: floatingMedium 3s ease-in-out infinite;
+}
+
+.animate-floating-lg {
+  animation: floatingLarge 3s ease-in-out infinite;
+}
+
+.animate-spin-smooth {
+  animation: spinSmooth 2s linear infinite;
+}
+
+.animate-bounce-smooth {
+  animation: bounce-smooth 1.5s ease-in-out infinite;
+}
+
+.animate-wave {
+  animation: wave 2s ease-in-out infinite;
+}
+
+/* Stagger Animation Delays */
+.animate-stagger-0 {
+  animation-delay: 0ms;
+}
+
+.animate-stagger-1 {
+  animation-delay: 100ms;
+}
+
+.animate-stagger-2 {
+  animation-delay: 200ms;
+}
+
+.animate-stagger-3 {
+  animation-delay: 300ms;
+}
+
+.animate-stagger-4 {
+  animation-delay: 400ms;
+}
+
+.animate-stagger-5 {
+  animation-delay: 500ms;
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Gradient text utility */
 .gradient-text {
   background: linear-gradient(
     135deg,
     var(--primary) 0%,
-    oklch(0.85 0.18 180) 100%
+    oklch(0.7 0.22 280) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -186,6 +628,50 @@
   background: rgba(22, 22, 30, 0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+/* Button Micro-interaction Utilities */
+.btn-interactive {
+  @apply transition-all duration-300;
+}
+
+.btn-interactive:hover {
+  @apply scale-105;
+}
+
+.btn-interactive:active {
+  @apply scale-95;
+}
+
+.btn-glow:hover {
+  @apply shadow-lg shadow-primary/30;
+}
+
+.btn-pulse-on-hover:hover {
+  animation: buttonPulse 2s infinite;
+}
+
+/* Enhanced Interactive Elements */
+.interactive-element {
+  @apply transition-all duration-300 cursor-pointer;
+}
+
+.interactive-element:hover {
+  @apply scale-105;
+}
+
+.interactive-element:active {
+  @apply scale-95;
+}
+
+/* Smooth Transitions */
+.smooth-transition {
+  @apply transition-all duration-500 ease-out;
+}
+
+/* Focus Styles */
+.focus-ring {
+  @apply focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
 }
 
 /* Custom scrollbar */

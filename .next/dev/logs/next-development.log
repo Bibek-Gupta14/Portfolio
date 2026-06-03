@@ -8,3 +8,386 @@
 [00:02:53.068] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772644039023} /_vercel/insights/view
 [00:03:58.134] Server  LOG      ✓ Compiled in 242ms
 [00:03:59.632] Server  LOG      ✓ Compiled in 344ms
+[00:13:34.854] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <Home>
+        <main className="min-h-scre...">
+          <Particles>
+          <CursorGlow>
+          <div className="relative z-10">
+            <Header>
+            <Hero>
+            <About>
+            <Experience>
+            <Skills>
+            <Projects>
+            <Education>
+            <Contact>
+              <section id="contact" className="py-24 px-6...">
+                <div className="max-w-5xl ...">
+                  <div ref={{current:null}} className="transition...">
+                    <h2>
+                    <p>
+                    <div className="grid md:gr...">
+                      <div>
+                      <div className="space-y-6">
+                        <h3>
+                        <div className="flex gap-4">
+                          <Button asChild={true} variant="outline" size="lg" className="flex-1 bor...">
+                            <Slot data-slot="button" className={"inline-f..."}>
+                              <SlotClone data-slot="button" className={"inline-f..."} ref={null}>
+                                <a
++                                 href="www.linkedin.com/in/bibekgupta14"
+-                                 href="https://www.linkedin.com/in/bibekgupta14/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  data-slot="button"
+                                  className={"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm..."}
+                                  ref={null}
+                                >
+                          ...
+                        ...
+            ...
+    ...
+
+[00:13:35.923] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:13:35.923] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:13:35.923] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780471491685} /_vercel/insights/view
+[00:15:00.153] Server  LOG      ✓ Compiled in 106ms
+[00:15:05.979] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:15:05.979] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:15:05.979] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780471581814} /_vercel/insights/view
+[00:19:16.686] Server  LOG      ✓ Compiled in 197ms
+[00:19:38.141] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:19:38.141] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:19:38.141] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780471853976} /_vercel/insights/view
+[00:21:35.933] Server  LOG      ✓ Compiled in 85ms
+[00:21:45.533] Server  LOG      ✓ Compiled in 95ms
+[00:25:33.982] Server  LOG      ✓ Compiled in 94ms
+[00:25:34.622] Browser ERROR   ./components/experience.tsx:17:7
+Parsing ecmascript source code failed
+  15 |       "Building and improving production-grade government web applications serving real end users, contributing to reliability, usability, and performance optimization.",
+  16 |       ""
+> 17 |       "AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment.",
+     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  18 |       "Directorate of Housing - Updated the portal and sent for third-party approval for auditing.",
+  19 |       "NIC Coffee Table Book – Led documentation design and content structuring, delivering a polished publication with clear information architecture and editorial accuracy.",
+  20 |     ],
+
+Expected ',', got 'string literal (AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment., "AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment.")'
+
+Import trace:
+  Server Component:
+    ./components/experience.tsx
+    ./app/page.tsx
+[00:25:38.565] Browser ERROR   ./components/experience.tsx:17:7
+Parsing ecmascript source code failed
+  15 |       "Building and improving production-grade government web applications serving real end users, contributing to reliability, usability, and performance optimization.",
+  16 |       "Home Guards "
+> 17 |       "AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment.",
+     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  18 |       "Directorate of Housing - Updated the portal and sent for third-party approval for auditing.",
+  19 |       "NIC Coffee Table Book – Led documentation design and content structuring, delivering a polished publication with clear information architecture and editorial accuracy.",
+  20 |     ],
+
+Expected ',', got 'string literal (AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment., "AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment.")'
+
+Import trace:
+  Server Component:
+    ./components/experience.tsx
+    ./app/page.tsx
+[00:25:47.570] Browser ERROR   ./components/experience.tsx:17:7
+Parsing ecmascript source code failed
+  15 |       "Building and improving production-grade government web applications serving real end users, contributing to reliability, usability, and performance optimization.",
+  16 |       "Home Guards andCivil"
+> 17 |       "AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment.",
+     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  18 |       "Directorate of Housing - Updated the portal and sent for third-party approval for auditing.",
+  19 |       "NIC Coffee Table Book – Led documentation design and content structuring, delivering a polished publication with clear information architecture and editorial accuracy.",
+  20 |     ],
+
+Expected ',', got 'string literal (AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment., "AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment.")'
+
+Import trace:
+  Server Component:
+    ./components/experience.tsx
+    ./app/page.tsx
+[00:25:52.003] Browser ERROR   ./components/experience.tsx:17:7
+Parsing ecmascript source code failed
+  15 |       "Building and improving production-grade government web applications serving real end users, contributing to reliability, usability, and performance optimization.",
+  16 |       "Home Guards and Civil Defence"
+> 17 |       "AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment.",
+     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  18 |       "Directorate of Housing - Updated the portal and sent for third-party approval for auditing.",
+  19 |       "NIC Coffee Table Book – Led documentation design and content structuring, delivering a polished publication with clear information architecture and editorial accuracy.",
+  20 |     ],
+
+Expected ',', got 'string literal (AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment., "AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment.")'
+
+Import trace:
+  Server Component:
+    ./components/experience.tsx
+    ./app/page.tsx
+[00:25:58.569] Browser ERROR   ./components/experience.tsx:17:7
+Parsing ecmascript source code failed
+  15 |       "Building and improving production-grade government web applications serving real end users, contributing to reliability, usability, and performance optimization.",
+  16 |       "Directorate of Home Guards and Civil Defence"
+> 17 |       "AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment.",
+     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  18 |       "Directorate of Housing - Updated the portal and sent for third-party approval for auditing.",
+  19 |       "NIC Coffee Table Book – Led documentation design and content structuring, delivering a polished publication with clear information architecture and editorial accuracy.",
+  20 |     ],
+
+Expected ',', got 'string literal (AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment., "AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment.")'
+
+Import trace:
+  Server Component:
+    ./components/experience.tsx
+    ./app/page.tsx
+[00:26:00.567] Browser ERROR   ./components/experience.tsx:17:7
+Parsing ecmascript source code failed
+  15 |       "Building and improving production-grade government web applications serving real end users, contributing to reliability, usability, and performance optimization.",
+  16 |       "Directorate of Home Guards and Civil Defence - "
+> 17 |       "AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment.",
+     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  18 |       "Directorate of Housing - Updated the portal and sent for third-party approval for auditing.",
+  19 |       "NIC Coffee Table Book – Led documentation design and content structuring, delivering a polished publication with clear information architecture and editorial accuracy.",
+  20 |     ],
+
+Expected ',', got 'string literal (AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment., "AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment.")'
+
+Import trace:
+  Server Component:
+    ./components/experience.tsx
+    ./app/page.tsx
+[00:26:02.832] Server  LOG      ✓ Compiled in 74ms
+[00:26:59.141] Server  LOG      ✓ Compiled in 73ms
+[00:27:04.105] Server  LOG      ✓ Compiled in 72ms
+[00:27:04.561] Browser ERROR   ./components/experience.tsx:16:55
+Parsing ecmascript source code failed
+  14 |     description: [
+  15 |       "Building and improving production-grade government web applications serving real end users, contributing to reliability, usability, and performance optimization.",
+> 16 |       "Directorate of Home Guards and Civil Defence -"Developing an internal dashboard for streamlined operations and data management.",
+     |                                                       ^^^^^^^^^^
+  17 |       "AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment.",
+  18 |       "Directorate of Housing - Updated the portal and sent for third-party approval for auditing.",
+  19 |       "NIC Coffee Table Book – Led documentation design and content structuring, delivering a polished publication with clear information architecture and editorial accuracy.",
+
+Expected ',', got 'Developing'
+
+Import trace:
+  Server Component:
+    ./components/experience.tsx
+    ./app/page.tsx
+[00:27:06.567] Browser ERROR   ./components/experience.tsx:16:56
+Parsing ecmascript source code failed
+  14 |     description: [
+  15 |       "Building and improving production-grade government web applications serving real end users, contributing to reliability, usability, and performance optimization.",
+> 16 |       "Directorate of Home Guards and Civil Defence - "Developing an internal dashboard for streamlined operations and data management.",
+     |                                                        ^^^^^^^^^^
+  17 |       "AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment.",
+  18 |       "Directorate of Housing - Updated the portal and sent for third-party approval for auditing.",
+  19 |       "NIC Coffee Table Book – Led documentation design and content structuring, delivering a polished publication with clear information architecture and editorial accuracy.",
+
+Expected ',', got 'Developing'
+
+Import trace:
+  Server Component:
+    ./components/experience.tsx
+    ./app/page.tsx
+[00:27:15.051] Server  LOG      ✓ Compiled in 78ms
+[00:28:27.245] Server  LOG      ✓ Compiled in 357ms
+[00:29:55.357] Server  LOG      ✓ Compiled in 398ms
+[00:30:17.969] Server  LOG      ✓ Compiled in 77ms
+[00:30:20.598] Server  LOG      ✓ Compiled in 394ms
+[00:30:40.024] Server  LOG      ✓ Compiled in 178ms
+[00:32:23.227] Server  LOG      ✓ Compiled in 61ms
+[00:32:24.340] Server  LOG      ✓ Compiled in 69ms
+[00:32:28.620] Server  LOG      ✓ Compiled in 85ms
+[00:32:29.716] Server  LOG      ✓ Compiled in 83ms
+[00:32:33.335] Server  LOG      ✓ Compiled in 99ms
+[00:36:26.200] Server  LOG      ✓ Compiled in 106ms
+[00:39:13.233] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:39:13.233] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:39:13.233] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#experience color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#experience","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780473029060} /_vercel/insights/view
+[00:40:35.693] Server  LOG      ✓ Compiled in 103ms
+[00:40:43.135] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:40:43.135] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:40:43.135] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#experience color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#experience","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780473118963} /_vercel/insights/view
+[00:40:57.147] Server  LOG      ✓ Compiled in 62ms
+[00:41:07.540] Server  LOG      ✓ Compiled in 65ms
+[00:41:11.229] Server  LOG      ✓ Compiled in 74ms
+[00:41:15.648] Server  LOG      ✓ Compiled in 422ms
+[00:41:21.552] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:41:21.552] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:41:21.552] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#experience color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#experience","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780473157399} /_vercel/insights/view
+[00:41:55.338] Server  LOG      ✓ Compiled in 235ms
+[00:42:02.934] Server  LOG      ✓ Compiled in 239ms
+[00:42:09.485] Server  LOG      ✓ Compiled in 451ms
+[00:42:15.201] Server  LOG      ✓ Compiled in 220ms
+[00:42:22.974] Server  LOG      ✓ Compiled in 681ms
+[00:42:27.330] Server  LOG      ✓ Compiled in 76ms
+[00:42:33.029] Server  LOG      ✓ Compiled in 457ms
+[00:42:40.160] Server  LOG      ✓ Compiled in 70ms
+[00:43:46.808] Server  LOG      ✓ Compiled in 235ms
+[00:44:13.973] Server  LOG      ✓ Compiled in 235ms
+[00:44:23.928] Server  LOG      ✓ Compiled in 376ms
+[00:44:35.913] Server  LOG      ✓ Compiled in 374ms
+[00:44:44.213] Server  LOG      ✓ Compiled in 599ms
+[00:44:48.923] Server  LOG      ✓ Compiled in 77ms
+[00:48:43.385] Server  LOG      ✓ Compiled in 86ms
+[00:48:55.079] Server  LOG      ✓ Compiled in 86ms
+[00:48:56.956] Server  LOG      ✓ Compiled in 280ms
+[00:51:39.211] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:51:39.211] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:51:39.211] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#experience color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#experience","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780473775049} /_vercel/insights/view
+[00:52:01.076] Server  LOG      ✓ Compiled in 694ms
+[00:52:05.154] Server  LOG      ✓ Compiled in 347ms
+[00:52:34.478] Server  LOG      ✓ Compiled in 348ms
+[00:55:47.696] Server  LOG      ✓ Compiled in 70ms
+[00:56:24.974] Server  LOG      ✓ Compiled in 67ms
+[00:57:22.407] Server  LOG      ✓ Compiled in 150ms
+[00:57:22.923] Server  LOG      ✓ Compiled in 112ms
+[00:57:50.532] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:57:50.532] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:57:50.532] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#experience color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#experience","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780474146363} /_vercel/insights/view
+[00:58:45.284] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:58:45.284] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/www.linkedin.com/in/bibekgupta14","route":"/www.linkedin.com/in/bibekgupta14"}
+[00:58:45.284] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/www.linkedin.com/in/bibekgupta14 color: rgb(120, 120, 120) color: inherit {"dp":"/www.linkedin.com/in/bibekgupta14","o":"http://localhost:3000/www.linkedin.com/in/bibekgupta14","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780474201124} /_vercel/insights/view
+[01:00:02.820] Server  LOG      ✓ Compiled in 196ms
+[01:00:46.393] Server  LOG      ✓ Compiled in 289ms
+[02:12:05.032] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:12:05.032] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {"dp":"/projects","o":"http://localhost:3000/projects","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780478600814} /_vercel/insights/view
+[02:12:49.953] Server  LOG      ✓ Compiled in 135ms
+[02:15:05.167] Server  LOG      ✓ Compiled in 319ms
+[02:18:56.849] Server  LOG      ✓ Compiled in 180ms
+[02:19:11.329] Server  LOG      ✓ Compiled in 401ms
+[02:21:00.052] Server  LOG      ✓ Compiled in 230ms
+[02:21:06.717] Browser WARN    Image with src "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:21:07.566] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:21:07.566] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/projects","route":"/projects"}
+[02:21:07.566] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {"dp":"/projects","o":"http://localhost:3000/projects","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780479142811} /_vercel/insights/view
+[02:21:18.128] Server  LOG      ✓ Compiled in 200ms
+[02:21:24.563] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:21:24.563] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/projects","route":"/projects"}
+[02:21:24.563] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {"dp":"/projects","o":"http://localhost:3000/projects","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780479159515} /_vercel/insights/view
+[02:21:37.356] Server  LOG      ✓ Compiled in 279ms
+[02:21:44.287] Server  LOG      ✓ Compiled in 387ms
+[02:21:49.562] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:21:49.562] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/projects","route":"/projects"}
+[02:21:49.562] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {"dp":"/projects","o":"http://localhost:3000/projects","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780479184584} /_vercel/insights/view
+[02:21:52.014] Server  LOG      ✓ Compiled in 329ms
+[02:22:33.880] Server  LOG      ✓ Compiled in 226ms
+[02:22:38.514] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:22:38.514] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/projects","route":"/projects"}
+[02:22:38.514] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {"dp":"/projects","o":"http://localhost:3000/projects","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780479234364} /_vercel/insights/view
+[02:22:50.192] Server  LOG      ✓ Compiled in 212ms
+[02:23:12.467] Server  LOG      ✓ Compiled in 256ms
+[02:23:18.111] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:23:18.112] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/projects","route":"/projects"}
+[02:23:18.112] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {"dp":"/projects","o":"http://localhost:3000/projects","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780479273630} /_vercel/insights/view
+[02:23:40.874] Server  LOG      ✓ Compiled in 103ms
+[02:23:43.314] Server  LOG      ✓ Compiled in 250ms
+[02:26:06.463] Server  LOG      ✓ Compiled in 135ms
+[02:26:12.117] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:26:12.117] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/projects","route":"/projects"}
+[02:26:12.117] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {"dp":"/projects","o":"http://localhost:3000/projects","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780479447956} /_vercel/insights/view
+[02:26:20.346] Server  LOG      ✓ Compiled in 276ms
+[02:26:25.302] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:26:25.302] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/projects","route":"/projects"}
+[02:26:25.302] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {"dp":"/projects","o":"http://localhost:3000/projects","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780479461126} /_vercel/insights/view
+[02:26:33.158] Server  LOG      ✓ Compiled in 421ms
+[02:26:35.613] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:26:35.613] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/projects","route":"/projects"}
+[02:26:35.613] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {"dp":"/projects","o":"http://localhost:3000/projects","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780479471450} /_vercel/insights/view
+[02:26:52.382] Server  LOG      ✓ Compiled in 198ms
+[02:27:07.438] Server  LOG      ✓ Compiled in 332ms
+[02:27:08.636] Browser WARN    Image with src "https://img.magnific.com/premium-vector/ashok-pillar-vector-sign-symbol-satyamev-jayete-text-hindi-ashok-stambh-sign-symbol-national-emblem-india-government-india-vector-illustration-flat-design_1228591-626.jpg?w=1480?w=300&h=100&fit=fill" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:27:12.097] Browser WARN    Image with src "https://img.magnific.com/premium-vector/ashok-pillar-vector-sign-symbol-satyamev-jayete-text-hindi-ashok-stambh-sign-symbol-national-emblem-india-government-india-vector-illustration-flat-design_1228591-626.jpg?w=1480?w=300&h=100&fit=fill" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:27:12.231] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:27:12.231] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/projects","route":"/projects"}
+[02:27:12.231] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {"dp":"/projects","o":"http://localhost:3000/projects","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780479508081} /_vercel/insights/view
+[02:27:51.318] Server  LOG      ✓ Compiled in 380ms
+[02:28:11.896] Server  LOG      ✓ Compiled in 151ms
+[02:28:45.726] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:28:45.726] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780479601018} /_vercel/insights/view
+[02:29:42.320] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {"dp":"/projects","o":"http://localhost:3000/projects","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780479658108} /_vercel/insights/view
+[02:29:51.664] Server  LOG      ✓ Compiled in 239ms
+[02:32:41.854] Server  LOG      ✓ Compiled in 217ms
+[02:34:00.256] Server  LOG      ✓ Compiled in 264ms
+[02:39:09.213] Server  LOG      ✓ Compiled in 246ms
+[02:39:20.613] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780480236396} /_vercel/insights/view
+[02:41:51.083] Server  LOG      ✓ Compiled in 125ms
+[02:41:55.044] Server  LOG      ✓ Compiled in 96ms
+[02:42:01.923] Server  LOG      ✓ Compiled in 214ms
+[02:48:29.625] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:48:29.626] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:48:29.626] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#about color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780480785458} /_vercel/insights/view
+[02:51:51.721] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:51:51.721] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:51:51.721] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#about color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780480987569} /_vercel/insights/view
+[02:52:08.455] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:52:08.455] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:52:08.455] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#about color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780481004305} /_vercel/insights/view
+[02:52:57.160] Server  LOG      ✓ Compiled in 478ms
+[02:53:01.072] Server  LOG      ✓ Compiled in 318ms
+[02:53:47.963] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:53:47.963] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {"dp":"/projects","o":"http://localhost:3000/projects","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780481103764} /_vercel/insights/view
+[02:53:55.980] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#about color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780481111325} /_vercel/insights/view
+[02:54:58.781] Server  LOG      ✓ Compiled in 394ms
+[02:55:41.497] Server  LOG      ✓ Compiled in 415ms
+[02:56:20.901] Server  LOG      ✓ Compiled in 431ms
+[02:56:45.715] Server  LOG      ✓ Compiled in 337ms
+[02:57:03.822] Server  LOG      ✓ Compiled in 248ms
+[02:57:43.955] Server  LOG      ✓ Compiled in 175ms
+[02:57:44.360] Server  LOG      ✓ Compiled in 258ms
+[02:57:44.909] Server  LOG      ✓ Compiled in 280ms
+[02:57:45.816] Server  LOG      ✓ Compiled in 888ms
+[02:59:55.328] Server  LOG      ✓ Compiled in 361ms
+[03:00:03.518] Server  LOG      ✓ Compiled in 267ms
+[03:00:17.099] Server  LOG      ✓ Compiled in 683ms
+[03:00:25.405] Server  LOG      ✓ Compiled in 434ms
+[03:00:54.462] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {"dp":"/projects","o":"http://localhost:3000/projects","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780481530271} /_vercel/insights/view
+[03:01:00.718] Server  LOG      ✓ Compiled in 880ms
+[03:01:02.578] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1780481538277} /_vercel/insights/view
+[03:01:10.915] Server  LOG      ✓ Compiled in 690ms
+[03:01:27.072] Server  LOG      ✓ Compiled in 405ms
+[03:01:33.668] Server  LOG      ✓ Compiled in 204ms
+[03:01:50.788] Server  LOG      ✓ Compiled in 446ms
+[03:02:25.490] Server  LOG      ✓ Compiled in 499ms
+[03:02:36.362] Server  LOG      ✓ Compiled in 359ms
+[03:04:15.868] Server  LOG      ✓ Compiled in 231ms
+[03:04:42.160] Server  LOG      ✓ Compiled in 549ms
+[03:04:52.876] Server  LOG      ✓ Compiled in 535ms
+[03:05:29.533] Server  LOG      ✓ Compiled in 1124ms
+[03:06:28.081] Server  LOG      ✓ Compiled in 547ms
+[03:07:21.443] Server  LOG      ✓ Compiled in 386ms
+[03:07:33.145] Server  LOG      ✓ Compiled in 385ms
+[03:07:56.441] Server  LOG      ✓ Compiled in 127ms
+[03:08:10.801] Server  LOG      ✓ Compiled in 150ms
+[03:08:15.744] Server  LOG      ✓ Compiled in 140ms
+[03:08:22.392] Server  LOG      ✓ Compiled in 145ms
+[03:08:45.861] Server  LOG      ✓ Compiled in 417ms
+[03:08:47.090] Server  LOG      ✓ Compiled in 591ms
+[03:08:48.456] Server  LOG      ✓ Compiled in 503ms
+[03:08:58.366] Server  LOG      ✓ Compiled in 352ms
+[03:09:18.877] Server  LOG      ✓ Compiled in 151ms
+[03:09:21.929] Server  LOG      ✓ Compiled in 213ms
+[03:09:35.378] Server  LOG      ✓ Compiled in 154ms
+[03:09:42.261] Server  LOG      ✓ Compiled in 700ms

@@ -51,7 +51,7 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
         <a href="#" className="relative flex items-center group">
           <div className="relative">
-            <span className="text-5xl font-black tracking-tighter bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent hover:from-blue-300 hover:via-cyan-200 hover:to-blue-300 transition-all duration-300 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">
+            <span className="text-5xl font-black tracking-tighter bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent hover:from-blue-300 hover:via-cyan-200 hover:to-blue-300 transition-all duration-300 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)] hover:drop-shadow-[0_0_25px_rgba(34,211,238,0.7)] animate-button-pulse">
               BG
             </span>
             <span className="absolute -inset-2 bg-gradient-to-r from-blue-400/30 to-cyan-400/30 blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-300 -z-10"></span>
@@ -60,18 +60,25 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
+          {navItems.map((item, index) => (
             <li key={item.name}>
               <a
                 href={item.href}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
+                  "text-sm font-medium transition-all duration-300 relative group animate-stagger",
+                  `animate-stagger-${index}`,
                   activeSection === item.href.slice(1)
                     ? "text-primary"
-                    : "text-white",
+                    : "text-white hover:text-primary",
                 )}
               >
                 {item.name}
+                <span
+                  className={cn(
+                    "absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-transparent group-hover:w-full transition-all duration-300",
+                    activeSection === item.href.slice(1) && "w-full"
+                  )}
+                />
               </a>
             </li>
           ))}
@@ -79,8 +86,12 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className={cn(
+            "md:hidden text-white transition-all duration-300 hover:scale-110 active:scale-95 p-2 rounded-lg",
+            mobileMenuOpen && "bg-primary/20"
+          )}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -94,16 +105,17 @@ export function Header() {
         )}
       >
         <ul className="px-6 py-4 space-y-4">
-          {navItems.map((item) => (
+          {navItems.map((item, index) => (
             <li key={item.name}>
               <a
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className={cn(
-                  "block text-sm font-medium transition-colors hover:text-primary",
+                  "block text-sm font-medium transition-all duration-300 relative animate-stagger",
+                  `animate-stagger-${index}`,
                   activeSection === item.href.slice(1)
                     ? "text-primary"
-                    : "text-white",
+                    : "text-white hover:text-primary",
                 )}
               >
                 {item.name}

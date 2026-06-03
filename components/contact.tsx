@@ -97,12 +97,12 @@ export function Contact() {
                   className="flex-1 border-border hover:border-primary hover:text-secondary bg-transparent"
                 >
                   <a
-                    href="https://www.linkedin.com/in/bibekgupta14/"
+                    href="www.linkedin.com/in/bibekgupta14/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Linkedin className="mr-2" size={18} />
-                    LinkedIn
+                    LinkedIn  
                   </a>
                 </Button>
                 <Button

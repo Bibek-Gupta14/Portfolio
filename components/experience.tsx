@@ -7,6 +7,28 @@ import Image from "next/image";
 
 const experiences = [
   {
+    period: "May 2026 — Present",
+    title: "Summer Intern",
+    company: "National Informatics Centre, Govt of India",
+    location: "Shillong, Meghalaya, India",
+    description: [
+      "Building and improving production-grade government web applications serving real end users, contributing to reliability, usability, and performance optimization.",
+      "Directorate of Home Guards and Civil Defence - Developing an internal dashboard for streamlined operations and data management. ",
+      "AMO ESIS Website Revamp – Enhancing a live platform with improved frontend responsiveness and backend stability; applying software engineering best practices in a regulated production environment.",
+      "Directorate of Housing - Updated the portal and sent for third-party approval for auditing.",
+      "NIC Coffee Table Book – Led documentation design and content structuring, delivering a polished publication with clear information architecture and editorial accuracy.",
+    ],
+    skills: [
+      "Responsive Web Refactoring",
+      "Audit-Ready Deployment Pipeline",
+      "Government Systems",
+      "Information Architecture Design",
+      "UI/UX",
+    ],
+    link: "https://www.nic.gov.in",
+    logo: "/nic-logo-blue.png",
+  },
+  {
     period: "Jun 2025 — Jul 2025",
     title: "AI/ML Virtual Intern",
     company: "IBM SkillsBuild x Edunet Foundation",
@@ -21,7 +43,7 @@ const experiences = [
       "Data Preprocessing",
       "Model Evaluation",
     ],
-    link: "#",
+    link: "https://skillsbuild.org/",
     logo: "/ibm-logo-blue.jpg",
   },
 ];
@@ -67,13 +89,13 @@ export function Experience() {
                 <div className="flex flex-col md:flex-row md:items-start gap-6">
                   {/* Company Logo */}
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-xl bg-secondary overflow-hidden border border-border">
+                    <div className="w-20 h-20 rounded-xl bg-secondary overflow-hidden border border-border flex items-center justify-center p-1">
                       <Image
-                        src={exp.logo || "/placeholder.svg"}
+                        src={exp.logo || "/nic-logo-blue.png"}
                         alt={exp.company}
-                        width={64}
-                        height={64}
-                        className="object-cover"
+                        width={200}
+                        height={200}
+                        className="w-full h-full object-contain rounded-xl"
                       />
                     </div>
                   </div>

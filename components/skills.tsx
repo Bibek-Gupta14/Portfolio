@@ -3,6 +3,7 @@
 import { useInView } from "@/hooks/use-in-view";
 import { cn } from "@/lib/utils";
 import { Code2, Brain, Database, Cpu } from "lucide-react";
+import { useState } from "react";
 
 const skillCategories = [
   {
@@ -15,7 +16,14 @@ const skillCategories = [
     hoverBg: "group-hover:bg-blue-500/20",
     skillHover:
       "hover:bg-blue-500/20 hover:text-blue-400 hover:border-blue-500/50",
-    skills: ["Python", "TypeScript", "JavaScript", "Java", "CSS", "Git/GitHub"],
+    skills: [
+      { name: "Python", level: "expert" },
+      { name: "TypeScript", level: "beginner" },
+      { name: "JavaScript", level: "intermediate" },
+      { name: "Java", level: "intermediate" },
+      { name: "CSS", level: "expert" },
+      { name: "Git/GitHub", level: "expert" },
+    ],
   },
   {
     title: "AI/ML & LLMs",
@@ -28,12 +36,12 @@ const skillCategories = [
     skillHover:
       "hover:bg-purple-500/20 hover:text-purple-400 hover:border-purple-500/50",
     skills: [
-      "LangChain",
-      "OpenAI API",
-      "RAG Systems",
-      "Vector DBs (FAISS, ChromaDB)",
-      "Deep Learning",
-      "Neural Networks",
+      { name: "LangChain", level: "expert" },
+      { name: "Deep Learning", level: "intermediate" },
+      { name: "RAG Systems", level: "expert" },
+      { name: "Vector DBs", level: "expert" },
+      { name: "OpenAI API", level: "beginner" },
+      { name: "Neural Networks", level: "intermediate" },
     ],
   },
   {
@@ -47,12 +55,12 @@ const skillCategories = [
     skillHover:
       "hover:bg-emerald-500/20 hover:text-emerald-400 hover:border-emerald-500/50",
     skills: [
-      "React",
-      "FastAPI",
-      "Streamlit",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
+      { name: "React", level: "intermediate" },
+      { name: "FastAPI", level: "intermediate" },
+      { name: "Streamlit", level: "expert" },
+      { name: "Node.js", level: "intermediate" },
+      { name: "Express.js", level: "intermediate" },
+      { name: "MongoDB", level: "intermediate" },
     ],
   },
   {
@@ -65,12 +73,31 @@ const skillCategories = [
     hoverBg: "group-hover:bg-orange-500/20",
     skillHover:
       "hover:bg-orange-500/20 hover:text-orange-400 hover:border-orange-500/50",
-    skills: ["DSA", "OOPS", "Operating Systems", "DBMS", "Computer Networks"],
+    skills: [
+      { name: "DSA", level: "intermediate" },
+      { name: "OOPS", level: "intermediate" },
+      { name: "Operating Systems", level: "expert" },
+      { name: "DBMS", level: "intermediate" },
+      { name: "Computer Networks", level: "intermediate" },
+    ],
   },
 ];
 
+const levelColors = {
+  expert: "from-emerald-500 to-teal-500",
+  intermediate: "from-blue-500 to-cyan-500",
+  beginner: "from-orange-500 to-amber-500",
+};
+
+const levelWidths = {
+  expert: "w-4/5",
+  intermediate: "w-3/5",
+  beginner: "w-2/5",
+};
+
 export function Skills() {
   const { ref, isInView } = useInView();
+  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   return (
     <section id="skills" className="py-24 px-6">
@@ -89,14 +116,14 @@ export function Skills() {
             Technologies and tools I use to bring ideas to life.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-7">
+          <div className="grid md:grid-cols-2 gap-7">
             {skillCategories.map((category, categoryIndex) => {
               const Icon = category.icon;
               return (
                 <div
                   key={category.title}
                   className={cn(
-                    "group relative p-8 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm transition-all duration-500 min-h-[380px]",
+                    "group relative p-8 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm transition-all duration-500",
                     category.borderColor,
                     "hover:bg-card/60 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5",
                   )}
@@ -127,29 +154,51 @@ export function Skills() {
                   {/* Title */}
                   <h3
                     className={cn(
-                      "text-lg font-semibold text-foreground mb-4 transition-colors",
+                      "text-lg font-semibold text-foreground mb-6 transition-colors",
                       category.iconColor.replace("text-", "group-hover:text-"),
                     )}
                   >
                     {category.title}
                   </h3>
 
-                  {/* Skills tags */}
-                  <div className="flex flex-wrap gap-3">
+                  {/* Skills with bars */}
+                  <div className="space-y-4">
                     {category.skills.map((skill, skillIndex) => (
-                      <span
-                        key={skill}
-                        className={cn(
-                          "px-4 py-2.5 text-sm font-medium rounded-lg border border-border/30 bg-secondary/30 text-muted-foreground transition-all duration-300 cursor-default",
-                          category.skillHover,
-                          "hover:scale-105 hover:shadow-md",
-                        )}
+                      <div
+                        key={skill.name}
+                        className="animate-stagger"
                         style={{
-                          animationDelay: `${skillIndex * 50}ms`,
+                          animationDelay: isInView ? `${skillIndex * 50}ms` : "0ms",
                         }}
+                        onMouseEnter={() => setHoveredSkill(skill.name)}
+                        onMouseLeave={() => setHoveredSkill(null)}
                       >
-                        {skill}
-                      </span>
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-sm font-medium text-foreground transition-colors hover:text-primary">
+                            {skill.name}
+                          </span>
+                          <span className="text-xs text-muted-foreground capitalize bg-secondary/30 px-2 py-1 rounded border border-border/50 group-hover:border-primary/30 transition-colors">
+                            {skill.level}
+                          </span>
+                        </div>
+
+                        {/* Skill Bar */}
+                        <div className="h-2 bg-secondary/50 rounded-full overflow-hidden border border-border/30 group-hover:border-primary/30 transition-colors">
+                          <div
+                            className={cn(
+                              `bg-gradient-to-r ${levelColors[skill.level as keyof typeof levelColors]} transition-all duration-700 h-full rounded-full shadow-lg`,
+                              hoveredSkill === skill.name
+                                ? levelWidths[skill.level as keyof typeof levelWidths]
+                                : "w-0"
+                            )}
+                            style={{
+                              animation: isInView
+                                ? `skillBarFill 1s ease-out ${skillIndex * 50}ms forwards`
+                                : "none",
+                            }}
+                          />
+                        </div>
+                      </div>
                     ))}
                   </div>
                 </div>
