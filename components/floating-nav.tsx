@@ -50,7 +50,7 @@ export function FloatingNav() {
       {/* Floating Navigation */}
       <nav
         className={cn(
-          "fixed bottom-8 right-8 z-40 transition-all duration-500",
+          "fixed bottom-8 left-6 z-40 transition-all duration-500 hidden sm:block",
           isVisible
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-32 pointer-events-none"

@@ -2,7 +2,7 @@
 
 import { useInView } from "@/hooks/use-in-view";
 import { cn } from "@/lib/utils";
-import { ExternalLink, Briefcase, Award } from "lucide-react";
+import { ExternalLink, Briefcase } from "lucide-react";
 import Image from "next/image";
 
 const experiences = [
@@ -45,15 +45,6 @@ const experiences = [
     ],
     link: "https://skillsbuild.org/",
     logo: "/ibm-logo-blue.jpg",
-  },
-];
-
-const achievements = [
-  {
-    title: "Mumbai Hacks - Top 10%",
-    description:
-      "Ranked in the top 10% of one of India's largest Agentic AI hackathons",
-    icon: Award,
   },
 ];
 
@@ -152,33 +143,6 @@ export function Experience() {
                 </div>
               </div>
             ))}
-          </div>
-
-          <h3 className="text-lg font-semibold text-foreground mb-6">
-            Achievements
-          </h3>
-          <div className="grid gap-4">
-            {achievements.map((achievement, index) => {
-              const Icon = achievement.icon;
-              return (
-                <div
-                  key={index}
-                  className="flex items-center gap-4 p-4 bg-gradient-to-r from-primary/10 to-transparent rounded-xl border border-primary/20"
-                >
-                  <div className="p-3 bg-primary/20 rounded-lg">
-                    <Icon className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">
-                      {achievement.title}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {achievement.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
           </div>
         </div>
       </div>

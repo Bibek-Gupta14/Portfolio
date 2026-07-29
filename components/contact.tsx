@@ -97,7 +97,7 @@ export function Contact() {
                   className="flex-1 border-border hover:border-primary hover:text-secondary bg-transparent"
                 >
                   <a
-                    href="www.linkedin.com/in/bibekgupta14/"
+                    href="https://www.linkedin.com/in/bibekgupta14/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -124,11 +124,14 @@ export function Contact() {
               <Button
                 asChild
                 size="lg"
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                className="group relative isolate overflow-hidden w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/25"
               >
                 <a href="mailto:bibekg1406@gmail.com" target="_blank">
-                  <Mail className="mr-2" size={18} />
-                  Send me an email
+                  <div className="shimmer-btn-layer" />
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    <Mail size={18} />
+                    Send me an email
+                  </span>
                 </a>
               </Button>
             </div>

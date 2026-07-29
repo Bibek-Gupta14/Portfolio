@@ -117,11 +117,14 @@ export function Hero() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/25"
+                  className="group relative isolate overflow-hidden bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/25"
                 >
                   <a href="#projects">
-                    View My Work
-                    <ArrowDown className="ml-2" size={18} />
+                    <div className="shimmer-btn-layer" />
+                    <span className="relative z-10 flex items-center gap-2">
+                      View My Work
+                      <ArrowDown size={18} />
+                    </span>
                   </a>
                 </Button>
                 <Button
@@ -130,7 +133,7 @@ export function Hero() {
                   size="lg"
                   className="border-border hover:border-primary hover:bg-primary/5 bg-transparent hover:text-primary"
                 >
-                  <a href="/Updated_Resume.pdf" download>
+                  <a href="/Resume_Bibek.pdf" download>
                     <Download className="mr-2" size={18} />
                     Download CV
                   </a>
@@ -145,7 +148,7 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/50 to-primary/30 rounded-full blur-3xl scale-110 animate-pulse" />
                 <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl shadow-primary/20">
                   <Image
-                    src="/profile-photo.jpg"
+                    src="/picture.png"
                     alt="Bibek Gupta"
                     fill
                     className="object-cover"
@@ -164,22 +167,25 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* Stats */}
+              {/* Stats Cards with Qbit Labs-style top accent gradient line */}
               <div className="grid grid-cols-3 gap-6 w-full max-w-md">
-                <div className="text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border">
+                <div className="group relative text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border overflow-hidden hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-sky-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="text-3xl font-bold text-primary">
                     <AnimatedCounter end={6} suffix="+" />
                   </div>
                   <div className="text-sm text-muted-foreground">Projects</div>
                 </div>
-                <div className="text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border">
+                <div className="group relative text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border overflow-hidden hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-teal-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="text-3xl font-bold text-primary">
                     <AnimatedCounter end={9} suffix="." prefix="" />
                     <span className="text-2xl">05 </span>
                   </div>
                   <div className="text-sm text-muted-foreground">CGPA</div>
                 </div>
-                <div className="text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border">
+                <div className="group relative text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border overflow-hidden hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-purple-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="text-3xl font-bold text-primary">
                     Top <AnimatedCounter end={10} suffix="%" />
                   </div>

@@ -16,7 +16,19 @@ const allProjects = [
     live: "https://github.com/Bibek-Gupta14/AgentResearch-ai",
     period: "Jan 2026 – Feb 2026",
     image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
+      "https://miro.medium.com/v2/resize:fit:1400/0*BzMUeWmxz7pwERJS?w=800&h=600&fit=crop",
+    featured: true,
+  },
+  {
+    title: "OcularSLM",
+    description:
+      "A hybrid SLM + Vision agent that materializes visual snippets (via clipboard) into functional code files directly in your local workspace.",
+    tech: ["Python", "Vision AI", "SLM", "PyQt", "LLM", "Automation"],
+    github: "https://github.com/Bibek-Gupta14/OcularSLM",
+    live: "https://github.com/Bibek-Gupta14/OcularSLM",
+    period: "Jun 2026 – Jul 2026",
+    image:
+      "https://www.artificialintelligence-news.com/wp-content/uploads/2024/12/ai-artificial-intelligence-machine-learning-research-privacy-ethics-development-1024x714.jpg?w=800&h=600&fit=crop",
     featured: true,
   },
   {
@@ -28,7 +40,7 @@ const allProjects = [
     live: "https://github.com/Bibek-Gupta14/DocQuery",
     period: "Dec 2025 – Jan 2026",
     image:
-      "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=800&h=600&fit=crop",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKe1_Li12wAeJASXZ1PQXvxzpn1XhEZgnf757ZO1Z7FB_d2kxxn5pq9rKb&s=10?w=800&h=600&fit=crop",
     featured: true,
   },
   {
@@ -40,7 +52,19 @@ const allProjects = [
     live: "https://bibek-gupta14.github.io/AMO-ESIS",
     period: "May 2026 ",
     image:
-      "https://img.magnific.com/premium-vector/ashok-pillar-vector-sign-symbol-satyamev-jayete-text-hindi-ashok-stambh-sign-symbol-national-emblem-india-government-india-vector-illustration-flat-design_1228591-626.jpg?w=1480?w=300&h=100&fit=fill",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8pwrE1izGgsJTnOSf3M-QTu8lv8rX3DUmYfDqKU7LMw&s=10?w=300&h=100&fit=fill",
+    featured: false,
+  },
+  {
+    title: "Directorate of Housing Website - Government of Meghalata",
+    description:
+      "A comprehensive government website for the Directorate of Housing, Meghalaya. Built with accessibility and compliance at its core, featuring WCAG 2.1 AA compliance, GIGW 3.0 certification, responsive design, and advanced typography controls for inclusive access to social security benefits.",
+    tech: ["HTML5", "CSS3", "Vanilla JavaScript", "WCAG 2.1 AA", "Responsive Design"],
+    github: "https://github.com/Bibek-Gupta14/MegHousing",
+    live: "https://bibek-gupta14.github.io/MegHousing",
+    period: "May 2026 ",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyr440FEoMKrYKsgM3qge05b_47pqNsX286CmnmVNhBlYMYteM14fbUw8&s=10?w=300&h=100&fit=fill",
     featured: false,
   },
   {

@@ -91,35 +91,51 @@ export function About() {
               </h3>
             </div>
 
-            <div className="group relative p-6 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-orange-500/10 rounded-2xl border border-purple-500/30 overflow-hidden transition-all duration-500 hover:border-pink-500/50 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1 cursor-default">
-              {/* Animated gradient background on hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/10 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="grid gap-4">
+              {/* GDG Solution Challenge */}
+              <div className="group relative p-6 bg-gradient-to-r from-blue-500/10 via-teal-500/10 to-emerald-500/10 rounded-2xl border border-blue-500/30 overflow-hidden transition-all duration-500 hover:border-teal-500/50 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 cursor-default">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-teal-500/10 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/20 rounded-full blur-3xl group-hover:bg-teal-500/30 transition-all duration-500" />
+                <div className="absolute top-0 left-6 right-6 h-[2px] rounded-full bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              {/* Decorative blurs */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-pink-500/20 rounded-full blur-3xl group-hover:bg-pink-500/30 transition-all duration-500" />
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-500/20 rounded-full blur-3xl group-hover:bg-purple-500/30 transition-all duration-500" />
-
-              {/* Accent line */}
-              <div className="absolute top-0 left-6 right-6 h-[2px] rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-              <p className="relative text-lg text-foreground">
-                🏆 I recently made it to the{" "}
-                <span className="relative inline-block">
-                  <span className="relative z-10 font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 bg-clip-text text-transparent">
-                    top 10%
+                <p className="relative text-lg text-foreground">
+                  🚀{" "}
+                  <span className="font-bold bg-gradient-to-r from-blue-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent">
+                    Google Developer Groups Solution Challenge 2026
                   </span>
-                  <span className="absolute -inset-1 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-orange-500/20 rounded-md blur-sm" />
-                </span>{" "}
-                of{" "}
-                <span className="font-semibold text-pink-400 group-hover:text-pink-300 transition-colors">
-                  Mumbai Hacks
-                </span>
-                , one of India's largest{" "}
-                <span className="font-semibold bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
-                  Agentic AI
-                </span>{" "}
-                hackathons.
-              </p>
+                  {" – "}
+                  <span className="text-muted-foreground">
+                    Recognized for successfully designing, building, and submitting a prototype solution utilizing artificial intelligence tools.
+                  </span>
+                </p>
+              </div>
+
+              {/* Mumbai Hacks */}
+              <div className="group relative p-6 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-orange-500/10 rounded-2xl border border-purple-500/30 overflow-hidden transition-all duration-500 hover:border-pink-500/50 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1 cursor-default">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/10 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-pink-500/20 rounded-full blur-3xl group-hover:bg-pink-500/30 transition-all duration-500" />
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-500/20 rounded-full blur-3xl group-hover:bg-purple-500/30 transition-all duration-500" />
+                <div className="absolute top-0 left-6 right-6 h-[2px] rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                <p className="relative text-lg text-foreground">
+                  🏆 Made it to the{" "}
+                  <span className="relative inline-block">
+                    <span className="relative z-10 font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 bg-clip-text text-transparent">
+                      top 10%
+                    </span>
+                    <span className="absolute -inset-1 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-orange-500/20 rounded-md blur-sm" />
+                  </span>{" "}
+                  of{" "}
+                  <span className="font-semibold text-pink-400 group-hover:text-pink-300 transition-colors">
+                    Mumbai Hacks
+                  </span>
+                  , one of India's largest{" "}
+                  <span className="font-semibold bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
+                    Agentic AI
+                  </span>{" "}
+                  hackathons.
+                </p>
+              </div>
             </div>
           </div>
         </div>

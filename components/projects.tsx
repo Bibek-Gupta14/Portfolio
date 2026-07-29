@@ -16,7 +16,18 @@ const projects = [
     live: "https://agentresearch-ai.pages.dev/",
     period: "Jan 2026 – Feb 2026",
     image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
+      "https://miro.medium.com/v2/resize:fit:1400/0*BzMUeWmxz7pwERJS?w=800&h=600&fit=crop",
+    featured: true,
+  },
+  {
+    title: "OcularSLM",
+    description:
+      "A hybrid SLM + Vision agent that materializes visual snippets (via clipboard) into functional code files directly in your local workspace.",
+    tech: ["Python", "Vision AI", "SLM", "VLM", "PyQt", "LLM", "Automation"],
+    github: "https://github.com/Bibek-Gupta14/OcularSLM",
+    period: "Jun 2026 – Jul 2026",
+    image:
+      "https://www.artificialintelligence-news.com/wp-content/uploads/2024/12/ai-artificial-intelligence-machine-learning-research-privacy-ethics-development-1024x714.jpg?w=800&h=600&fit=crop",
     featured: true,
   },
   {
@@ -28,7 +39,7 @@ const projects = [
     live: "https://doc-query-ai.streamlit.app/",
     period: "Dec 2025 – Jan 2026",
     image:
-      "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=800&h=600&fit=crop",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKe1_Li12wAeJASXZ1PQXvxzpn1XhEZgnf757ZO1Z7FB_d2kxxn5pq9rKb&s=10?w=800&h=600&fit=crop",
     featured: true,
   },
 ];
@@ -73,7 +84,9 @@ export function Projects() {
                   animation: "pageEnter 0.8s ease-out forwards",
                 }}
               >
-                <div className="relative overflow-hidden rounded-2xl bg-card/50 border border-border/50 hover:border-primary/30 hover:bg-card/80 transition-all duration-300 p-0 hover:shadow-2xl hover:shadow-primary/10 transform hover:scale-105">
+                <div className="relative overflow-hidden rounded-2xl bg-card/50 border border-border/50 hover:border-primary/40 hover:bg-card/80 transition-all duration-500 p-0 hover:shadow-2xl hover:shadow-primary/10 transform hover:scale-[1.02]">
+                  {/* Qbit Labs Style Accent Top Border */}
+                  <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-primary via-teal-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/0 to-primary/0 group-hover:from-primary/10 group-hover:via-transparent group-hover:to-primary/5 transition-all duration-300 pointer-events-none" />
 
                   <div className="grid md:grid-cols-2 relative z-10">

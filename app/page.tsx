@@ -11,6 +11,7 @@ import { Particles } from "@/components/particles";
 import { CursorGlow } from "@/components/cursor-glow";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { FloatingNav } from "@/components/floating-nav";
+import { FloatingSocials } from "@/components/floating-socials";
 import { BackToTop } from "@/components/back-to-top";
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
         <Footer />
       </div>
       <FloatingNav />
+      <FloatingSocials />
       <BackToTop />
     </main>
   );

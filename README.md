@@ -99,6 +99,13 @@ An intelligent AI-powered research agent that autonomously gathers, analyzes, an
 - **Tech:** Python, LangChain, OpenAI, FastAPI, React, TypeScript
 - 🔗 [Live Demo](https://agentresearch-ai.pages.dev/) | [GitHub](https://github.com/Bibek-Gupta14/AgentResearch-ai)
 
+#### 🧿 **OcularSLM**
+
+A hybrid SLM + Vision agent that materializes visual snippets (via clipboard) into functional code files directly in your local workspace.
+
+- **Tech:** Python, Vision AI, SLM, PyQt, LLM, Automation
+- 🔗 [GitHub](https://github.com/Bibek-Gupta14/OcularSLM)
+
 #### 📚 **DocQuery AI**
 
 A sophisticated document query system powered by AI using RAG (Retrieval Augmented Generation) for accurate context-aware responses.

@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const navItems = [
   { name: "About", href: "#about" },
@@ -17,8 +18,11 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
@@ -58,43 +62,62 @@ export function Header() {
           </div>
         </a>
 
-        {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center gap-8">
-          {navItems.map((item, index) => (
-            <li key={item.name}>
-              <a
-                href={item.href}
-                className={cn(
-                  "text-sm font-medium transition-all duration-300 relative group animate-stagger",
-                  `animate-stagger-${index}`,
-                  activeSection === item.href.slice(1)
-                    ? "text-primary"
-                    : "text-white hover:text-primary",
-                )}
-              >
-                {item.name}
-                <span
+        {/* Right side nav items & theme toggle */}
+        <div className="flex items-center gap-6">
+          {/* Desktop Navigation */}
+          <ul className="hidden md:flex items-center gap-8">
+            {navItems.map((item, index) => (
+              <li key={item.name}>
+                <a
+                  href={item.href}
                   className={cn(
-                    "absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-transparent group-hover:w-full transition-all duration-300",
-                    activeSection === item.href.slice(1) && "w-full"
+                    "text-sm font-medium transition-all duration-300 relative group animate-stagger",
+                    `animate-stagger-${index}`,
+                    activeSection === item.href.slice(1)
+                      ? "text-primary font-bold"
+                      : "text-foreground/90 hover:text-primary",
                   )}
-                />
-              </a>
-            </li>
-          ))}
-        </ul>
+                >
+                  {item.name}
+                  <span
+                    className={cn(
+                      "absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-transparent group-hover:w-full transition-all duration-300",
+                      activeSection === item.href.slice(1) && "w-full"
+                    )}
+                  />
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        {/* Mobile Menu Button */}
-        <button
-          className={cn(
-            "md:hidden text-white transition-all duration-300 hover:scale-110 active:scale-95 p-2 rounded-lg",
-            mobileMenuOpen && "bg-primary/20"
+          {/* Theme Toggle Button */}
+          {mounted && (
+            <button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="p-2.5 rounded-xl bg-secondary/80 hover:bg-primary/20 border border-border hover:border-primary/50 text-foreground transition-all duration-300 hover:scale-110 active:scale-95 shadow-sm cursor-pointer"
+              aria-label="Toggle theme"
+              title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+            >
+              {theme === "dark" ? (
+                <Sun size={18} className="text-amber-400 transition-transform duration-500 hover:rotate-90" />
+              ) : (
+                <Moon size={18} className="text-indigo-500 transition-transform duration-500 hover:-rotate-45" />
+              )}
+            </button>
           )}
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+
+          {/* Mobile Menu Button */}
+          <button
+            className={cn(
+              "md:hidden text-foreground transition-all duration-300 hover:scale-110 active:scale-95 p-2 rounded-lg",
+              mobileMenuOpen && "bg-primary/20"
+            )}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Navigation */}
@@ -114,8 +137,8 @@ export function Header() {
                   "block text-sm font-medium transition-all duration-300 relative animate-stagger",
                   `animate-stagger-${index}`,
                   activeSection === item.href.slice(1)
-                    ? "text-primary"
-                    : "text-white hover:text-primary",
+                    ? "text-primary font-bold"
+                    : "text-foreground/90 hover:text-primary",
                 )}
               >
                 {item.name}
