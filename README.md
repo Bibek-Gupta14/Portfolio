@@ -2,7 +2,7 @@
 
 # 🚀 Bibek Gupta's Portfolio
 
-### _AI Engineer | Full-Stack Developer | Innovation Enthusiast_
+### _Ex Summer Intern @NIC | AI Engineer | Software Developer | Innovation Enthusiast_
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=22D3EE&center=true&vCenter=true&width=435&lines=AI+%26+ML+Engineer;LangChain+Developer;RAG+Systems+Expert;Full-Stack+Developer" alt="Typing SVG" />
 
