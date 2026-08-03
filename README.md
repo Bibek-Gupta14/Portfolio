@@ -215,7 +215,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ### ⭐ Star this repo if you like it!
 
-Made with ❤️ by **Bibek Gupta**
+Made with ❤️ by **Bibek Gupta.**
 
 [![Live Portfolio](https://img.shields.io/badge/🚀_CLICK_ME-View_Live_Portfolio-00C853?style=for-the-badge&labelColor=00E676)](https://bibek-gupta-portfolio.vercel.app/)
 
