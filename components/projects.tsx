@@ -102,7 +102,7 @@ export function Projects() {
                     <div className="p-8 flex flex-col justify-center">
                       <div className="flex items-center gap-2 mb-3">
                         {project.featured && (
-                          <span className="px-2 py-1 text-xs font-medium bg-primary/20 text-primary rounded-full border border-primary/30 group-hover:bg-primary/30 transition-colors">
+                          <span className="inline-flex items-center px-2.5 py-1 bg-emerald-500/15 rounded-full border border-emerald-500/40 text-xs text-emerald-600 dark:text-emerald-400 font-semibold shadow-sm shadow-emerald-500/10">
                             Featured
                           </span>
                         )}

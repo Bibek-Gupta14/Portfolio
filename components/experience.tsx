@@ -113,7 +113,7 @@ export function Experience() {
                         <ExternalLink size={16} />
                       </a>
                     </h3>
-                    <p className="text-primary font-medium mb-4">
+                    <p className="text-[#0A66C2] dark:text-[#388af6] font-semibold mb-4">
                       {exp.company}
                     </p>
 
@@ -130,14 +130,27 @@ export function Experience() {
                     </ul>
 
                     <div className="flex flex-wrap gap-2">
-                      {exp.skills.map((skill) => (
-                        <span
-                          key={skill}
-                          className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full"
-                        >
-                          {skill}
-                        </span>
-                      ))}
+                      {exp.skills.map((skill, i) => {
+                        const colors = [
+                          "bg-sky-500/15 border-sky-500/30 text-sky-600 dark:text-sky-300 hover:bg-sky-500/25",
+                          "bg-purple-500/15 border-purple-500/30 text-purple-600 dark:text-purple-300 hover:bg-purple-500/25",
+                          "bg-emerald-500/15 border-emerald-500/30 text-emerald-600 dark:text-emerald-300 hover:bg-emerald-500/25",
+                          "bg-amber-500/15 border-amber-500/30 text-amber-700 dark:text-amber-300 hover:bg-amber-500/25",
+                          "bg-rose-500/15 border-rose-500/30 text-rose-600 dark:text-rose-300 hover:bg-rose-500/25",
+                          "bg-teal-500/15 border-teal-500/30 text-teal-600 dark:text-teal-300 hover:bg-teal-500/25",
+                          "bg-indigo-500/15 border-indigo-500/30 text-indigo-600 dark:text-indigo-300 hover:bg-indigo-500/25",
+                          "bg-orange-500/15 border-orange-500/30 text-orange-600 dark:text-orange-300 hover:bg-orange-500/25",
+                        ];
+                        const colorClass = colors[i % colors.length];
+                        return (
+                          <span
+                            key={skill}
+                            className={`px-3 py-1 text-xs font-semibold rounded-full border transition-all duration-300 shadow-xs ${colorClass}`}
+                          >
+                            {skill}
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>

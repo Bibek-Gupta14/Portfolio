@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const experiences = [
   {
-    period: "May 2026 — Present",
+    period: "May 2026 — Jul 2026",
     title: "Summer Intern",
     company: "National Informatics Centre, Govt of India",
     location: "Shillong, Meghalaya, India",
@@ -116,7 +116,7 @@ export function TimelineExperience() {
                         <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                           {exp.title}
                         </h3>
-                        <p className="text-sm text-primary font-medium">
+                        <p className="text-sm text-[#3993ed] dark:text-[#3993ed] font-semibold">
                           {exp.company}
                         </p>
                       </div>
@@ -134,21 +134,34 @@ export function TimelineExperience() {
                       ))}
                     </ul>
 
-                    <div className="flex flex-wrap gap-1.5">
-                      {exp.skills.map((skill) => (
-                        <span
-                          key={skill}
-                          className="px-2.5 py-0.5 text-xs font-medium bg-primary/10 text-primary rounded-full"
-                        >
-                          {skill}
-                        </span>
-                      ))}
+                    <div className="flex flex-wrap gap-2">
+                      {exp.skills.map((skill, i) => {
+                        const colors = [
+                          "bg-sky-500/15 border-sky-500/30 text-sky-600 dark:text-sky-300 hover:bg-sky-500/25",
+                          "bg-purple-500/15 border-purple-500/30 text-purple-600 dark:text-purple-300 hover:bg-purple-500/25",
+                          "bg-orange-500/15 border-orange-500/30 text-orange-600 dark:text-orange-300 hover:bg-orange-500/25",
+                          "bg-amber-500/15 border-amber-500/30 text-amber-700 dark:text-amber-300 hover:bg-amber-500/25",
+                          "bg-rose-500/15 border-rose-500/30 text-rose-600 dark:text-rose-300 hover:bg-rose-500/25",
+                          "bg-teal-500/15 border-teal-500/30 text-teal-600 dark:text-teal-300 hover:bg-teal-500/25",
+                          "bg-indigo-500/15 border-indigo-500/30 text-indigo-600 dark:text-indigo-300 hover:bg-indigo-500/25",
+                          "bg-orange-500/15 border-orange-500/30 text-orange-600 dark:text-orange-300 hover:bg-orange-500/25",
+                        ];
+                        const colorClass = colors[i % colors.length];
+                        return (
+                          <span
+                            key={skill}
+                            className={`px-3 py-1 text-xs font-semibold rounded-full border transition-all duration-300 shadow-xs ${colorClass}`}
+                          >
+                            {skill}
+                          </span>
+                        );
+                      })}
                     </div>
 
                     {exp.isActive && (
-                      <div className="mt-3 inline-flex items-center gap-2 px-2 py-1 bg-primary/10 rounded-full border border-primary/30 text-xs text-primary font-medium">
-                        <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                        Currently
+                      <div className="mt-3 inline-flex items-center gap-2 px-2.5 py-1 bg-emerald-500/15 rounded-full border border-emerald-500/40 text-xs text-emerald-600 dark:text-emerald-400 font-semibold shadow-sm shadow-emerald-500/10">
+                        <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-md shadow-emerald-500/50" />
+                        Completed
                       </div>
                     )}
                   </div>

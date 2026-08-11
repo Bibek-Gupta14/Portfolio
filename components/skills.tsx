@@ -245,31 +245,42 @@ export function Skills() {
             Technologies and tools I use to bring ideas to life.
           </p>
 
-          {/* Duotone Glassmorphism Tech Marquee Banner */}
-          <div className="relative mb-12 overflow-hidden rounded-2xl border border-primary/30 bg-card/60 backdrop-blur-xl p-4 shadow-xl shadow-primary/10">
-            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-card via-card/80 to-transparent z-20 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-card via-card/80 to-transparent z-20 pointer-events-none" />
+          {/* High-End Ultra-Vibrant Liquid Glass Marquee Banner */}
+          <div className="relative mb-10 overflow-hidden rounded-3xl border border-primary/40 bg-gradient-to-r from-card/90 via-secondary/40 to-card/90 backdrop-blur-2xl px-5 py-7 shadow-[0_0_50px_rgba(56,189,248,0.15)] group/marquee">
+            {/* Top & Bottom Luminous Neon Edge Lines */}
+            <div className="absolute top-0 left-12 right-12 h-[1px] bg-gradient-to-r from-transparent via-cyan-400/80 to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 left-12 right-12 h-[1px] bg-gradient-to-r from-transparent via-purple-500/80 to-transparent pointer-events-none" />
 
-            <div className="flex overflow-hidden w-full">
-              <div className="animate-marquee flex items-center gap-5 shrink-0 flex-nowrap">
+            {/* Soft Liquid Ambient Glow Halos */}
+            <div className="absolute -top-16 left-1/4 w-64 h-64 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none animate-pulse" />
+            <div className="absolute -bottom-16 right-1/4 w-64 h-64 bg-purple-500/15 rounded-full blur-3xl pointer-events-none animate-pulse" />
+
+            {/* Deep Dual-Edge Liquid Gradient Fades */}
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-card via-card/90 to-transparent z-30 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-card via-card/90 to-transparent z-30 pointer-events-none" />
+
+            <div className="flex overflow-hidden w-full relative z-10 py-2">
+              <div className="animate-marquee flex items-center gap-5 shrink-0 flex-nowrap py-3">
                 {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, idx) => (
                   <div
                     key={idx}
-                    className="group relative flex shrink-0 items-center gap-3.5 px-5 py-3 rounded-2xl bg-secondary/50 border border-border/70 backdrop-blur-xl transition-all duration-500 ease-out cursor-pointer whitespace-nowrap hover:-translate-y-1.5 hover:scale-105 hover:bg-card/90 hover:border-primary/60 hover:shadow-xl hover:shadow-primary/20"
+                    className="group relative flex shrink-0 items-center gap-3.5 px-5 py-3 rounded-2xl bg-gradient-to-br from-secondary/80 via-card/90 to-secondary/60 border border-white/15 dark:border-white/10 backdrop-blur-xl transition-all duration-500 ease-out cursor-pointer whitespace-nowrap hover:-translate-y-1 hover:scale-105 hover:border-cyan-400/80 hover:shadow-[0_0_30px_rgba(56,189,248,0.35)]"
                   >
-                    {/* Subtle Sheen Highlight on Hover */}
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                    {/* Flowing Liquid Glass Sheen Highlight */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-cyan-300/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-                    {/* Icon Container with subtle rotation & scaling */}
-                    <div className="w-8 h-8 rounded-xl bg-card/90 border border-border/50 flex items-center justify-center p-1.5 group-hover:scale-110 group-hover:rotate-6 group-hover:border-primary/40 transition-all duration-300 shadow-sm shrink-0">
+                    {/* Holographic Glowing Icon Badge Container */}
+                    <div className="w-9 h-9 rounded-xl bg-card/90 border border-white/20 dark:border-white/15 flex items-center justify-center p-1.5 group-hover:scale-115 group-hover:rotate-6 group-hover:border-cyan-400/60 transition-all duration-300 shadow-[0_0_15px_rgba(56,189,248,0.2)] shrink-0">
                       {item.icon}
                     </div>
 
-                    <span className="text-xs font-semibold uppercase tracking-wider text-foreground group-hover:text-primary transition-colors">
+                    {/* Crisp Typography with Thin Luminous Glow */}
+                    <span className="text-xs font-bold uppercase tracking-wider text-foreground group-hover:text-cyan-400 group-hover:drop-shadow-[0_0_10px_rgba(56,189,248,0.8)] transition-all duration-300">
                       {item.name}
                     </span>
 
-                    <span className="text-[10px] text-muted-foreground font-mono bg-card/80 px-2 py-0.5 rounded-md border border-border/40 group-hover:border-primary/30 group-hover:text-primary transition-colors">
+                    {/* Cyberpunk Category Tag */}
+                    <span className="text-[10px] font-mono text-muted-foreground bg-card/90 px-2.5 py-0.5 rounded-lg border border-white/10 group-hover:border-cyan-400/50 group-hover:text-cyan-300 group-hover:shadow-[0_0_10px_rgba(56,189,248,0.3)] transition-all duration-300">
                       {item.category}
                     </span>
                   </div>

@@ -117,7 +117,7 @@ export function Hero() {
                 <Button
                   asChild
                   size="lg"
-                  className="group relative isolate overflow-hidden bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/25"
+                  className="group relative isolate overflow-hidden bg-[#FFD700] hover:bg-[#e6c200] text-slate-950 font-bold transition-all duration-300 hover:scale-105 shadow-lg shadow-[#FFD700]/30 hover:shadow-[#FFD700]/50"
                 >
                   <a href="#projects">
                     <div className="shimmer-btn-layer" />
@@ -155,38 +155,43 @@ export function Hero() {
                     priority
                   />
                 </div>
-                {/* Floating badges */}
-                <div className="absolute -right-4 top-8 p-3 bg-card/80 backdrop-blur-sm rounded-xl border border-border shadow-lg animate-floating-lg hover:shadow-primary/30 transition-shadow">
-                  <Code2 className="text-primary" size={24} />
+                {/* Floating badges with vibrant neon colors */}
+                <div className="absolute -right-4 top-8 p-3 bg-card/80 backdrop-blur-md rounded-xl border border-cyan-500/40 shadow-lg shadow-cyan-500/10 animate-floating-lg hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] transition-all">
+                  <Code2 className="text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]" size={24} />
                 </div>
-                <div className="absolute -left-4 top-1/2 p-3 bg-card/80 backdrop-blur-sm rounded-xl border border-border shadow-lg animate-floating-md hover:shadow-primary/30 transition-shadow">
-                  <Brain className="text-primary" size={24} />
+                <div className="absolute -left-4 top-1/2 p-3 bg-card/80 backdrop-blur-md rounded-xl border border-pink-500/40 shadow-lg shadow-pink-500/10 animate-floating-md hover:shadow-[0_0_20px_rgba(192,132,252,0.5)] transition-all">
+                  <Brain className="text-pink-400 drop-shadow-[0_0_8px_rgba(192,132,252,0.8)]" size={24} />
                 </div>
-                <div className="absolute -right-2 bottom-8 p-3 bg-card/80 backdrop-blur-sm rounded-xl border border-border shadow-lg animate-floating-sm hover:shadow-primary/30 transition-shadow">
-                  <Database className="text-primary" size={24} />
+                <div className="absolute -right-2 bottom-8 p-3 bg-card/80 backdrop-blur-md rounded-xl border border-yellow-500/40 shadow-lg shadow-yellow-500/10 animate-floating-sm hover:shadow-[0_0_20px_rgba(52,211,153,0.5)] transition-all">
+                  <Database className="text-yellow-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.8)]" size={24} />
                 </div>
               </div>
 
-              {/* Stats Cards with Qbit Labs-style top accent gradient line */}
+              {/* Stats Cards: Orange, White, and Green respectively */}
               <div className="grid grid-cols-3 gap-6 w-full max-w-md">
-                <div className="group relative text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border overflow-hidden hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-sky-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="text-3xl font-bold text-primary">
+                {/* 1. Projects - Orange */}
+                <div className="group relative text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border overflow-hidden hover:border-orange-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-500/10">
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-orange-500 via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="text-3xl font-bold text-orange-500 dark:text-orange-400">
                     <AnimatedCounter end={6} suffix="+" />
                   </div>
                   <div className="text-sm text-muted-foreground">Projects</div>
                 </div>
-                <div className="group relative text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border overflow-hidden hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-teal-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="text-3xl font-bold text-primary">
+
+                {/* 2. CGPA - White */}
+                <div className="group relative text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border overflow-hidden hover:border-white/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-white/10">
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-slate-200 via-white to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="text-3xl font-bold text-foreground dark:text-white">
                     <AnimatedCounter end={9} suffix="." prefix="" />
                     <span className="text-2xl">05 </span>
                   </div>
                   <div className="text-sm text-muted-foreground">CGPA</div>
                 </div>
-                <div className="group relative text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border overflow-hidden hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-purple-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="text-3xl font-bold text-primary">
+
+                {/* 3. Mumbai Hacks - Green */}
+                <div className="group relative text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border overflow-hidden hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/10">
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-emerald-500 via-teal-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="text-3xl font-bold text-emerald-500 dark:text-emerald-400">
                     Top <AnimatedCounter end={10} suffix="%" />
                   </div>
                   <div className="text-sm text-muted-foreground">

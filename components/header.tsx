@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
@@ -52,13 +53,17 @@ export function Header() {
           : "bg-transparent",
       )}
     >
-      <nav className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between min-h-[76px]">
         <a href="#" className="relative flex items-center group">
-          <div className="relative">
-            <span className="text-5xl font-black tracking-tighter bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent hover:from-blue-300 hover:via-cyan-200 hover:to-blue-300 transition-all duration-300 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)] hover:drop-shadow-[0_0_25px_rgba(34,211,238,0.7)] animate-button-pulse">
-              BG
-            </span>
-            <span className="absolute -inset-2 bg-gradient-to-r from-blue-400/30 to-cyan-400/30 blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-300 -z-10"></span>
+          <div className="relative w-32 h-12 md:w-56 md:h-13 transition-transform duration-300 group-hover:scale-105 mt-3">
+            <Image
+              src="/download.png"
+              alt="Bibek Gupta Logo"
+              fill
+              className="object-contain object-left dark:invert-0 dark:brightness-110 invert brightness-90 transition-all duration-500 drop-shadow-[0_0_15px_rgba(56,189,248,0.4)] group-hover:drop-shadow-[0_0_25px_rgba(56,189,248,0.7)]"
+              priority
+            />
+            <span className="absolute -inset-1 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-full blur-lg opacity-40 group-hover:opacity-90 transition-opacity duration-300 -z-10" />
           </div>
         </a>
 
