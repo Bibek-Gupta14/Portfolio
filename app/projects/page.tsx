@@ -2,6 +2,7 @@
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { cn } from "@/lib/utils";
 import { Github, ArrowLeft, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,6 +21,17 @@ const allProjects = [
     featured: true,
   },
   {
+    title: "PaperForge AI",
+    description:
+      "An automated document generation and paper synthesis engine powered by AI. Simplifies academic research, document formatting, and paper generation with structured AI workflows.",
+    tech: ["Python", "AI Agent", "LLM", "RAG", "Markdown", "Automation"],
+    github: "https://github.com/Bibek-Gupta14/PaperForge",
+    live: "https://github.com/Bibek-Gupta14/PaperForge",
+    period: "Feb 2026 – Present",
+    image: "/paperforge.jpg",
+    featured: true,
+  },
+  {
     title: "OcularSLM",
     description:
       "A hybrid SLM + Vision agent that materializes visual snippets (via clipboard) into functional code files directly in your local workspace.",
@@ -29,7 +41,7 @@ const allProjects = [
     period: "Jun 2026 – Jul 2026",
     image:
       "https://www.artificialintelligence-news.com/wp-content/uploads/2024/12/ai-artificial-intelligence-machine-learning-research-privacy-ethics-development-1024x714.jpg?w=800&h=600&fit=crop",
-    featured: true,
+    featured: false,
   },
   {
     title: "DocQuery AI",
@@ -166,7 +178,15 @@ export default function ProjectsPage() {
                           href={project.live}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300"
+                          className={cn(
+                            "flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 active:scale-95 text-slate-950 font-semibold shadow-md",
+                            index % 3 === 0 &&
+                              "bg-[#e89a95] hover:bg-[#d88984] shadow-[#e89a95]/30",
+                            index % 3 === 1 &&
+                              "bg-[#b6e895] hover:bg-[#a4d682] shadow-[#b6e895]/30",
+                            index % 3 === 2 &&
+                              "bg-[#96a6eb] hover:bg-[#8394d8] shadow-[#96a6eb]/30",
+                          )}
                         >
                           <ExternalLink size={16} />
                           Live

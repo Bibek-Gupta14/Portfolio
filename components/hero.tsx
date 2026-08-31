@@ -133,7 +133,7 @@ export function Hero() {
                   size="lg"
                   className="border-border hover:border-primary hover:bg-primary/5 bg-transparent hover:text-primary"
                 >
-                  <a href="/Resume_Bibek.pdf" download>
+                  <a href="/Updated_Resume_Bibek.pdf" download>
                     <Download className="mr-2" size={18} />
                     Download CV
                   </a>
