@@ -27,7 +27,7 @@ const allProjects = [
     tech: ["Python", "AI Agent", "LLM", "RAG", "Markdown", "Automation"],
     github: "https://github.com/Bibek-Gupta14/PaperForge",
     live: "https://github.com/Bibek-Gupta14/PaperForge",
-    period: "Feb 2026 – Present",
+    period: "Jul 2026 – Aug 2026",
     image: "/paperforge.jpg",
     featured: true,
   },
@@ -38,7 +38,7 @@ const allProjects = [
     tech: ["Python", "Vision AI", "SLM", "PyQt", "LLM", "Automation"],
     github: "https://github.com/Bibek-Gupta14/OcularSLM",
     live: "https://github.com/Bibek-Gupta14/OcularSLM",
-    period: "Jun 2026 – Jul 2026",
+    period: "May 2026 – Jun 2026",
     image:
       "https://www.artificialintelligence-news.com/wp-content/uploads/2024/12/ai-artificial-intelligence-machine-learning-research-privacy-ethics-development-1024x714.jpg?w=800&h=600&fit=crop",
     featured: false,
